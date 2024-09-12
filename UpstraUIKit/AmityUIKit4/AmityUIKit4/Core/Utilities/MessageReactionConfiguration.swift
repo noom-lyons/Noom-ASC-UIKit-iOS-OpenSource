@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import DeveloperToolsSupport
 
 class MessageReactionConfiguration {
     
@@ -23,7 +24,7 @@ class MessageReactionConfiguration {
         reactionsDict.forEach { item in
             let name = item["name"] ?? ""
             let image = ImageResource(name: item["image"] ?? "", bundle: AmityUIKit4Manager.bundle)
-            
+
             let item = AmityReactionType(name: name, image: image, accessibilityId: item["image"] ?? "")
             reactionList.append(item)
             availableReactions[name] = item
