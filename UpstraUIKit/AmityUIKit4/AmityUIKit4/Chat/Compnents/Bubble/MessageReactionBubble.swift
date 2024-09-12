@@ -8,16 +8,16 @@
 import SwiftUI
 
 // Placeholder reactions for now. Refactor this later.
-struct AmityLiveChatMessageReactionPreview: View {
+struct MessageReactionBubble: View {
     
     @EnvironmentObject private var viewConfig: AmityViewConfigController
 
     var message: MessageModel
-    let viewModel: AmityLiveChatMessageReactionPreviewViewModel
+    let viewModel: MessageReactionBubbleViewModel
     
     init(message: MessageModel) {
         self.message = message
-        self.viewModel = AmityLiveChatMessageReactionPreviewViewModel(message: message)
+        self.viewModel = MessageReactionBubbleViewModel(message: message)
     }
     
     var body: some View {
@@ -69,7 +69,7 @@ struct AmityLiveChatMessageReactionPreview: View {
     }
 }
 
-class AmityLiveChatMessageReactionPreviewViewModel {
+class MessageReactionBubbleViewModel {
     var topThreeReactions: [String] = []
     
     init(message: MessageModel) {
@@ -90,16 +90,16 @@ class AmityLiveChatMessageReactionPreviewViewModel {
     }
     
     func getReactionImage(reactionName: String) -> ImageResource {
-        if let reaction = MessageReactionConfiguration.shared.getMessageRactions().first(where: {$0.name == reactionName}) {
-            return reaction.image
-        } else {
+//        if let reaction = MessageReactionConfiguration.shared.getMessageRactions().first(where: {$0.name == reactionName}) {
+//            return reaction.image
+//        } else {
             return AmityIcon.Chat.messageReactionNotFound.imageResource
-        }
+//        }
     }
 }
 
 #if DEBUG
 #Preview {
-    AmityLiveChatMessageReactionPreview(message: MessageModel.preview)
+    MessageReactionBubble(message: MessageModel.preview)
 }
 #endif

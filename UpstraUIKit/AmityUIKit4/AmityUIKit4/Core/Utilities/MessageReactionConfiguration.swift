@@ -5,6 +5,8 @@
 //  Created by Manuchet Rungraksa on 3/5/2567 BE.
 //
 
+import Foundation
+
 class MessageReactionConfiguration {
     
     static let shared = MessageReactionConfiguration()
