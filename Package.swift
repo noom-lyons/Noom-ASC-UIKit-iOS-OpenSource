@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "AmityUIKit4",
+    name: "NoomAmityUIKit",
     defaultLocalization: "en",
     platforms: [
         .iOS(.v15)
@@ -12,7 +12,7 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "AmityUIKit4",
+            name: "NoomAmityUIKit",
             targets: ["Realm", "RealmSwift", "AmitySDK", "AmityUIKit4"]
         )
     ],
