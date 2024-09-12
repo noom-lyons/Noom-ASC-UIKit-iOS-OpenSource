@@ -13,7 +13,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "AmityUIKit4",
-            targets: ["AmityUIKit4"]
+            targets: ["Realm", "RealmSwift", "AmitySDK", "AmityUIKit4"]
         )
     ],
     targets: [
