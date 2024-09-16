@@ -24,7 +24,7 @@ extension UnsafeRawPointer {
 
 extension Bundle {
     public static var amityBundle: Bundle {
-        let name = "NoomAmityUIKit_AmityUIKit"
+        let name = "AmityUIKit"
         if let refBundle = #dsohandle.amityReferenceBundle,
            let url = refBundle.url(forResource: name, withExtension: "bundle"),
            let bundle = Bundle(url: url) {
