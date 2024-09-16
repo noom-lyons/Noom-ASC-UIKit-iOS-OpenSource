@@ -8,6 +8,7 @@
 
 import Network
 import SystemConfiguration
+import Foundation
 
 final class Reachability: NSObject {
 
