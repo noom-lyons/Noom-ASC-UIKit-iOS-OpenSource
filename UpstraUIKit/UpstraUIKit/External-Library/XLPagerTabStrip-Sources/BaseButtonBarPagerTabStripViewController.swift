@@ -322,7 +322,7 @@ class ExampleBaseButtonBarPagerTabStripViewController: BaseButtonBarPagerTabStri
     }
 
     func initialize() {
-        var bundle = Bundle(for: ButtonBarViewCell.self)
+        var bundle = Bundle.amityBundle
         if let resourcePath = bundle.path(forResource: "XLPagerTabStrip", ofType: "bundle") {
             if let resourcesBundle = Bundle(path: resourcePath) {
                 bundle = resourcesBundle

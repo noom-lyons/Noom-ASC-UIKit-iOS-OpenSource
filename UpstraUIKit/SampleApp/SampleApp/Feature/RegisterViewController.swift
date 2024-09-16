@@ -40,7 +40,7 @@ class RegisterViewController: UIViewController {
         textField.returnKeyType = .done
         textField.delegate = self
         
-        let dictionary = Bundle.main.infoDictionary!
+        let dictionary = Bundle.amityBundle.infoDictionary!
         let version = dictionary["CFBundleShortVersionString"] as! String
         let build = dictionary["CFBundleVersion"] as! String
         

@@ -73,7 +73,7 @@ public class LiveStreamPlayerViewController: UIViewController {
         self.streamIdToWatch = streamIdToWatch
         self.player = AmityVideoPlayer(client: AmityUIKitManager.client)
         
-        let bundle = Bundle(for: type(of: self))
+        let bundle = Bundle.amityBundle
         super.init(nibName: "LiveStreamPlayerViewController", bundle: bundle)
         
         modalPresentationStyle = .fullScreen

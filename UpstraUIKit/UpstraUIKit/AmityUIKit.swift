@@ -121,7 +121,7 @@ public final class AmityUIKitManager {
     }
     
     static var bundle: Bundle {
-        return Bundle(for: self)
+        return Bundle.amityBundle
     }
     
     // MARK: - Helper methods

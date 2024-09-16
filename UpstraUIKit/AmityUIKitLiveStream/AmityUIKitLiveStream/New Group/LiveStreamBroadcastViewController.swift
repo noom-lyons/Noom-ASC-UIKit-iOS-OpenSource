@@ -131,7 +131,7 @@ final public class LiveStreamBroadcastViewController: UIViewController {
         broadcaster = AmityVideoBroadcaster(client: client)
         mentionManager = ASCMentionManager(withType: .post(communityId: targetId))
         
-        let bundle = Bundle(for: type(of: self))
+        let bundle = Bundle.amityBundle
         super.init(nibName: "LiveStreamBroadcastViewController", bundle: bundle)
         
         goLiveOperationQueue.maxConcurrentOperationCount = 1
