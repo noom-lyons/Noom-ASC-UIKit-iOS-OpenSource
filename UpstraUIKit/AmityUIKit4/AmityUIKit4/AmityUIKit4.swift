@@ -157,7 +157,7 @@ extension Bundle {
             }
             return nil
         }
-        let names = ["NoomAmityUIKit_NoomAmityUIKit", "NoomAmityUIKit", "AmityUIKit", "NoomAmityUIKit_AmityUIKit"]
+        let names = ["NoomAmityUIKit_AmityUIKit4", "AmityUIKit4"]
         for name in names {
             if let bundle = bundle(name: name) {
                 print("mike-bundleName:\(name)")
