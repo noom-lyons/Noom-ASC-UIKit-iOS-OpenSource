@@ -18,19 +18,19 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
+            name: "AmitySDK",
+            url: "https://sdk.amity.co/sdk-release/ios-uikit-frameworks/4.0.0-beta20/AmitySDK.xcframework.zip",
+            checksum: "956c787e0cc9711c6c717cc1074e4b416b5a4e347fff831063b75984dbcdbc7b"
+        ),
+        .binaryTarget(
             name: "Realm",
-            url: "https://sdk.amity.co/sdk-release/ios-uikit-frameworks/4.0.0-beta19/Realm.xcframework.zip",
-            checksum: "6a5572a8798c32cc8f14918703b4e19bcd32351bfeac6d3b43191739726eaa7b"
+            url: "https://sdk.amity.co/sdk-release/ios-uikit-frameworks/4.0.0-beta20/Realm.xcframework.zip",
+            checksum: "e7c23f25fbcd2dc944d11a6eb647e6e6d1ff3da4d3cc3f2507f07785c93098e0"
         ),
         .binaryTarget(
             name: "RealmSwift",
-            url: "https://sdk.amity.co/sdk-release/ios-uikit-frameworks/4.0.0-beta19/RealmSwift.xcframework.zip",
-            checksum: "8fb529cf5322f15015d581f149bf4c926808bc7739173c2a6f7fd84dd33a9ec6"
-        ),
-        .binaryTarget(
-            name: "AmitySDK",
-            url: "https://sdk.amity.co/sdk-release/ios-uikit-frameworks/4.0.0-beta19/AmitySDK.xcframework.zip",
-            checksum: "c1d56b5c7328cfb6c64a7e3893a2f57a22ce54909a60d0963111e28f1c10b8d3"
+            url: "https://sdk.amity.co/sdk-release/ios-uikit-frameworks/4.0.0-beta20/RealmSwift.xcframework.zip",
+            checksum: "41699cdf7edc36f800ac3487931f7ef74c8eebcda8342c079ed041f74011a39a"
         ),
         .target(
             name: "AmityUIKit4",
