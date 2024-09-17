@@ -39,7 +39,10 @@ let package = Package(
                 "RealmSwift",
                 "AmitySDK"
             ],
-            path: "UpstraUIKit/UpstraUIKit"
+            path: "UpstraUIKit/UpstraUIKit",
+            resources: [
+                .process("Components/AmityBadgeView.xib")
+            ]
         )
     ]
 )
