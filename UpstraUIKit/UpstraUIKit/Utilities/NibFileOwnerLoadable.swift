@@ -24,16 +24,30 @@ extension UnsafeRawPointer {
 
 extension Bundle {
     public static var amityBundle: Bundle {
-        let name = "AmityUIKit"
-        if let refBundle = #dsohandle.amityReferenceBundle,
-           let url = refBundle.url(forResource: name, withExtension: "bundle"),
-           let bundle = Bundle(url: url) {
-            return bundle
-        } else if let url = Bundle.main.url(forResource: name, withExtension: "bundle"),
-                  let bundle = Bundle(url: url) {
-            return bundle
+        func bundle(name: String) -> Bundle? {
+            print("mike-bundleName:\(name)")
+            if let refBundle = #dsohandle.amityReferenceBundle,
+               let url = refBundle.url(forResource: name, withExtension: "bundle"),
+               let bundle = Bundle(url: url) {
+                print("mike-found:\(url.debugDescription)")
+                return bundle
+            } else if let url = Bundle.main.url(forResource: name, withExtension: "bundle"),
+                      let bundle = Bundle(url: url) {
+                print("mike-found:\(url.debugDescription)")
+                return bundle
+            }
+            return nil
         }
-        return Bundle(for: Self.self)
+        let names = ["NoomAmityUIKit", "AmityUIKit", "NoomAmityUIKit_AmityUIKit", "NoomAmityUIKit_NoomAmityUIKit"]
+        for name in names {
+            if let bundle = bundle(name: name) {
+                print("mike-bundleName:\(name)")
+                return bundle
+            }
+        }
+        let bundle = Bundle(for: Self.self)
+        print("mike-not-found:\(bundle.bundleURL.debugDescription)")
+        return bundle
     }
 }
 

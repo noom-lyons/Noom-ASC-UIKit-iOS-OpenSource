@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "AmityUIKit",
+    name: "NoomAmityUIKit",
     defaultLocalization: "en",
     platforms: [
         .iOS(.v15)
@@ -12,8 +12,8 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "AmityUIKit",
-            targets: ["AmityUIKit", "AmitySDK", "Realm", "RealmSwift"]
+            name: "NoomAmityUIKit",
+            targets: ["NoomAmityUIKit"]
         )
     ],
     targets: [
@@ -33,7 +33,7 @@ let package = Package(
             checksum: "a3164683df233bc79aefdbd7c92158a1c3025ccfc596f1d8022e9dfc2c0bd382"
         ),
         .target(
-            name: "AmityUIKit",
+            name: "NoomAmityUIKit",
             dependencies: [
                 "Realm",
                 "RealmSwift",
@@ -43,6 +43,9 @@ let package = Package(
         )
     ]
 )
+
+//x-xcode-log:6E39AB62-8195-44EE-A819-10B07D059331 product 'Realm' required by package 'noom-asc-uikit-ios-opensource' target 'NoomAmityUIKit' not found in package 'Amity-Social-Cloud-UIKit-iOS-SwiftPM'. Did you mean 'Realm'?
+
 
 //let package = Package(
 //    name: "NoomAmityUIKit4",
