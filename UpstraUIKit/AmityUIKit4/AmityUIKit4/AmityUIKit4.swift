@@ -127,9 +127,46 @@ public final class AmityUIKit4Manager {
     }
     
     static var bundle: Bundle {
-        return Bundle(for: self)
+        return Bundle.amityBundle ?? Bundle(for: Self.self)
     }
     
+}
+
+extension UnsafeRawPointer {
+    public var amityReferenceBundle: Bundle? {
+        var dlInfo = dl_info()
+        _ = dladdr(self, &dlInfo)
+        let path = String(cString: dlInfo.dli_fname)
+        return Bundle(url: URL(fileURLWithPath: path).deletingLastPathComponent())
+    }
+}
+
+extension Bundle {
+    public static var amityBundle: Bundle? {
+        func bundle(name: String) -> Bundle? {
+            print("mike-bundleName:\(name)")
+            if let refBundle = #dsohandle.amityReferenceBundle,
+               let url = refBundle.url(forResource: name, withExtension: "bundle"),
+               let bundle = Bundle(url: url) {
+                print("mike-found:\(url.debugDescription)")
+                return bundle
+            } else if let url = Bundle.main.url(forResource: name, withExtension: "bundle"),
+                      let bundle = Bundle(url: url) {
+                print("mike-found:\(url.debugDescription)")
+                return bundle
+            }
+            return nil
+        }
+        let names = ["NoomAmityUIKit_NoomAmityUIKit", "NoomAmityUIKit", "AmityUIKit", "NoomAmityUIKit_AmityUIKit"]
+        for name in names {
+            if let bundle = bundle(name: name) {
+                print("mike-bundleName:\(name)")
+                return bundle
+            }
+        }
+        print("mike-not-found")
+        return nil
+    }
 }
 
 final class AmityUIKitManagerInternal: NSObject {
