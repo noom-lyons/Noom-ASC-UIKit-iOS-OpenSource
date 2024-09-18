@@ -127,8 +127,8 @@ public final class AmityUIKit4Manager {
     }
     
     static var bundle: Bundle {
-        return Bundle(for: self)
-//        return Bundle.amityBundle ?? Bundle(for: Self.self)
+//        return Bundle(for: self)
+        return Bundle.amityBundle ?? Bundle(for: self)
     }
     
 }

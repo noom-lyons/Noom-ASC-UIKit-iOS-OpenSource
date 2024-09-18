@@ -49,22 +49,27 @@ public struct AmitySocialHomeTopNavigationComponent: AmityComponentView {
                 print("mike-searchIcon2:\(String(describing: test2))")
                 let test3 = UIImage(named: AmityIcon.searchIcon.rawValue, in: Bundle.amityBundle, compatibleWith: nil)
                 print("mike-searchIcon3:\(String(describing: test3))")
+                let test4 = AmityIcon.getImageResource(named: AmityIcon.searchIcon.rawValue)
+                print("mike-searchIcon4:\(String(describing: test4))")
             }, label: {
                 VStack {
-                    if let test1 = UIImage(named: AmityIcon.searchIcon.rawValue) {
-                        Image(uiImage: test1)
-                            .frame(size: CGSize(width: 21.0, height: 16.0))
-                    } else if let test2 = UIImage(named: AmityIcon.searchIcon.rawValue, in: Bundle(for: AmitySwiftUIHostWrapper.self), compatibleWith: nil) {
-                        Image(uiImage: test2)
-                            .frame(size: CGSize(width: 21.0, height: 16.0))
-                    } else if let test3 = UIImage(named: AmityIcon.searchIcon.rawValue, in: Bundle.amityBundle, compatibleWith: nil) {
-                        Image(uiImage: test3)
-                            .frame(size: CGSize(width: 21.0, height: 16.0))
-                    } else {
-                        let searchIcon = AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .globalSearchButton, key: "icon", of: String.self) ?? "")
-                        Image(searchIcon)
-                            .frame(size: CGSize(width: 21.0, height: 16.0))
-                    }
+                    let test4 = AmityIcon.getImageResource(named: AmityIcon.searchIcon.rawValue)
+                    Image(test4)
+                        .frame(size: CGSize(width: 21.0, height: 16.0))
+//                    if let test1 = UIImage(named: AmityIcon.searchIcon.rawValue) {
+//                        Image(uiImage: test1)
+//                            .frame(size: CGSize(width: 21.0, height: 16.0))
+//                    } else if let test2 = UIImage(named: AmityIcon.searchIcon.rawValue, in: Bundle(for: AmitySwiftUIHostWrapper.self), compatibleWith: nil) {
+//                        Image(uiImage: test2)
+//                            .frame(size: CGSize(width: 21.0, height: 16.0))
+//                    } else if let test3 = UIImage(named: AmityIcon.searchIcon.rawValue, in: Bundle.amityBundle, compatibleWith: nil) {
+//                        Image(uiImage: test3)
+//                            .frame(size: CGSize(width: 21.0, height: 16.0))
+//                    } else {
+//                        let searchIcon = AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .globalSearchButton, key: "icon", of: String.self) ?? "")
+//                        Image(searchIcon)
+//                            .frame(size: CGSize(width: 21.0, height: 16.0))
+//                    }
                 }
                 .frame(size: CGSize(width: 32.0, height: 32.0))
                 .background(Color(viewConfig.theme.secondaryColor.blend(.shade4)))
