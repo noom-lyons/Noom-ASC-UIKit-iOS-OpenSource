@@ -176,10 +176,10 @@ extension ImageResourceProvider where Self.RawValue == String {
     var imageResource: ImageResource {
         let bundles = [AmityUIKit4Manager.bundle, Bundle.main, Bundle(for: AmityMessageAction.self)]
         for bundle in bundles {
-            print("mike-try-bundle:\(bundle.debugDescription)")
             let name = self.rawValue
+            print("mike-try-name:\(name)-bundle:\(bundle.debugDescription)")
             if let url = bundle.url(forResource: name, withExtension: ".svg") {
-                print("mike-Found image!")
+                print("mike-Found image! \(url.debugDescription)")
                 return ImageResource(name: name, bundle: bundle)
             }
         }
