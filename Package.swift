@@ -39,7 +39,10 @@ let package = Package(
                 "RealmSwift",
                 "AmitySDK"
             ],
-            path: "UpstraUIKit/AmityUIKit4/AmityUIKit4"
+            path: "UpstraUIKit/AmityUIKit4/AmityUIKit4",
+            resources: [
+                .process("Resources")
+            ]
         )
     ]
 )
