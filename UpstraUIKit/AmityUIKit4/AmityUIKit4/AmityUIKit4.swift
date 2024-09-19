@@ -160,7 +160,7 @@ extension Bundle {
             }
             return nil
         }
-        let names = ["AmityUIKit_AmityUIKit4Resources", "AmityUIKit4"]
+        let names = ["AmityUIKit_AmityUIKit4", "AmityUIKit4"]
         for name in names {
             if let bundle = bundle(name: name) {
                 print("mike-bundleName:\(name)")

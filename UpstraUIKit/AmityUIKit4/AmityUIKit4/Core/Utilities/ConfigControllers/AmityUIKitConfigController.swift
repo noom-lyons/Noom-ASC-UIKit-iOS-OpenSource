@@ -130,7 +130,7 @@ class AmityUIKitConfigController {
     }
 
     private var configURL: URL? {
-        let bundles = [Bundle(for: AmityResourceTestClass.self), Bundle.main, Bundle(for: Self.self), Bundle.amityBundle].compactMap({ $0 })
+        let bundles = [Bundle.main, Bundle(for: Self.self), Bundle.amityBundle].compactMap({ $0 })
         for bundle in bundles {
             print("mike-configBundle:\(String(describing: bundle))")
             if let url = bundle.url(forResource: "AmityUIKitConfig", withExtension: "json") {

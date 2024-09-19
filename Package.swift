@@ -37,22 +37,26 @@ let package = Package(
             url: "https://sdk.amity.co/sdk-release/ios-uikit-frameworks/4.0.0-beta20/RealmSwift.xcframework.zip",
             checksum: "41699cdf7edc36f800ac3487931f7ef74c8eebcda8342c079ed041f74011a39a"
         ),
-        .target(
-            name: "AmityUIKit4Resources",
-            path: "UpstraUIKit/Resources",
-            resources: [
-                .process("Resources")
-            ]
-        ),
+//        .target(
+//            name: "AmityUIKit4Resources",
+//            path: "UpstraUIKit/Resources",
+//            resources: [
+//                .process("Resources")
+//            ]
+//        ),
         .target(
             name: "AmityUIKit4",
             dependencies: [
                 "Realm",
                 "RealmSwift",
-                "AmitySDK",
-                "AmityUIKit4Resources"
+                "AmitySDK"
+//                ,
+//                "AmityUIKit4Resources"
             ],
-            path: "UpstraUIKit/AmityUIKit4/AmityUIKit4"
+            path: "UpstraUIKit/AmityUIKit4/AmityUIKit4",
+            resources: [
+                .process("Resources")
+            ]
         )
     ]
 )
