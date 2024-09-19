@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import AmityUIKit4Resources
 
 class AmityUIKitConfigController {
     static let shared = AmityUIKitConfigController()
@@ -129,7 +130,7 @@ class AmityUIKitConfigController {
     }
 
     private var configURL: URL? {
-        let bundles = [AmityUIKit4Manager.bundle, Bundle.main, Bundle(for: Self.self)]
+        let bundles = [Bundle(for: AmityResourceTestClass.self), Bundle.main, Bundle(for: Self.self), Bundle.amityBundle].compactMap({ $0 })
         for bundle in bundles {
             print("mike-configBundle:\(String(describing: bundle))")
             if let url = bundle.url(forResource: "AmityUIKitConfig", withExtension: "json") {

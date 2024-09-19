@@ -7,7 +7,7 @@
 
 import UIKit
 import AmitySDK
-import AmityUIKit4_Resources
+import AmityUIKit4Resources
 
 /// AmityUIKit4
 public final class AmityUIKit4Manager {
@@ -128,9 +128,9 @@ public final class AmityUIKit4Manager {
     }
     
     static var bundle: Bundle {
-        return Bundle(for: AmityResourceTestClass.self)
+//        return Bundle(for: AmityResourceTestClass.self)
 //        return Bundle(for: self)
-//        return Bundle.amityBundle ?? Bundle(for: self)
+        return Bundle.amityBundle ?? Bundle(for: AmityResourceTestClass.self)
     }
     
 }
@@ -160,7 +160,7 @@ extension Bundle {
             }
             return nil
         }
-        let names = ["NoomAmityUIKit_AmityUIKit4", "AmityUIKit4"]
+        let names = ["AmityUIKit_AmityUIKit4Resources", "AmityUIKit4"]
         for name in names {
             if let bundle = bundle(name: name) {
                 print("mike-bundleName:\(name)")
