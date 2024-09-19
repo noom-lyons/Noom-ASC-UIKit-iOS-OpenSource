@@ -127,18 +127,34 @@ class AmityUIKitConfigController {
         config = loadConfigFile(fileName: configFile)
         excludedList = Set(config["excludes"] as? [String] ?? [])
     }
-    
-    private func loadConfigFile(fileName: String) -> [String: Any] {
-        if let path = AmityUIKit4Manager.bundle.path(forResource: fileName, ofType: "json") {
-            do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
-                if let jsonResult = jsonResult as? Dictionary<String, AnyObject> {
-                    return jsonResult
-                }
-            } catch {
-                return [:]
+
+    private var configURL: URL? {
+        let bundles = [AmityUIKit4Manager.bundle, Bundle.main, Bundle(for: self)]
+        for bundle in bundles {
+            print("mike-configBundle:\(String(describing: bunlde))")
+            if let url = bundle.url(forResource: "AmityUIKitConfig", withExtension: "json") {
+                print("mike-configBundle: FOUND!")
+                return url
             }
+        }
+        print("mike-configBundle: Not found")
+        return nil
+    }
+
+    private func loadConfigFile(fileName: String) -> [String: Any] {
+        guard let url = configURL else { return [:] }
+        do {
+            let data = try Data(contentsOf: url, options: .mappedIfSafe)
+            print("mike-config-data:\(String(describing: data))")
+            let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+            print("mike-config-jsonResult:\(String(describing: jsonResult))")
+            if let jsonResult = jsonResult as? Dictionary<String, AnyObject> {
+                print("mike-config-jsonResult: works")
+                return jsonResult
+            }
+        } catch (let error) {
+            print("mike-config-error: \(String(describing: error))")
+            return [:]
         }
         return [:]
     }
