@@ -7,7 +7,7 @@
 
 import UIKit
 import AmitySDK
-import AmityUIKit4Resources
+//import AmityUIKit4Resources
 
 /// AmityUIKit4
 public final class AmityUIKit4Manager {
@@ -130,7 +130,7 @@ public final class AmityUIKit4Manager {
     static var bundle: Bundle {
 //        return Bundle(for: AmityResourceTestClass.self)
 //        return Bundle(for: self)
-        return Bundle.amityBundle ?? Bundle(for: AmityResourceTestClass.self)
+        return Bundle.amityBundle ?? Bundle(for: self)
     }
     
 }

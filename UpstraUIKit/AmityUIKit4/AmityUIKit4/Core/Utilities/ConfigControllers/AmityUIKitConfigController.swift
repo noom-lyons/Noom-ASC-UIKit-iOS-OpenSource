@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-import AmityUIKit4Resources
+//import AmityUIKit4Resources
 
 class AmityUIKitConfigController {
     static let shared = AmityUIKitConfigController()
