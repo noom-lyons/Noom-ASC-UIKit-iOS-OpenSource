@@ -24,7 +24,6 @@ public struct AmitySocialHomePage: AmityPageView {
     
     public var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Text("Mike-TEST!")
             AmitySocialHomeTopNavigationComponent(pageId: id, selectedTab: viewModel.selectedTab, searchButtonAction: {
                 if viewModel.selectedTab == .newsFeed {
                     let context = AmitySocialHomePageBehavior.Context(page: self)
