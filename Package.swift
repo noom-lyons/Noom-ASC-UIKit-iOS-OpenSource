@@ -13,10 +13,15 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "AmityUIKit",
-            targets: ["Realm", "RealmSwift", "AmitySDK", "AmityUIKit4"]
+            targets: ["Realm", "RealmSwift", "AmitySDK", "AmityUIKit", "AmityUIKit4"]
         )
     ],
     targets: [
+        .binaryTarget(
+            name: "AmityUIKit",
+            url: "https://sdk.amity.co/sdk-release/ios-uikit-frameworks/4.0.0-beta20/AmityUIKit.xcframework.zip",
+            checksum: "ffce6328011738972c6f5cf2bb6cca0c9553d28e8ee0778fb663871952e910f7"
+        ),
         .binaryTarget(
             name: "AmitySDK",
             url: "https://sdk.amity.co/sdk-release/ios-uikit-frameworks/4.0.0-beta20/AmitySDK.xcframework.zip",

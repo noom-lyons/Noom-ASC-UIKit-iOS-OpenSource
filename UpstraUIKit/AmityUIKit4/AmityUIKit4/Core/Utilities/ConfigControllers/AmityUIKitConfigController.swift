@@ -129,9 +129,9 @@ class AmityUIKitConfigController {
     }
 
     private var configURL: URL? {
-        let bundles = [AmityUIKit4Manager.bundle, Bundle.main, Bundle(for: self)]
+        let bundles = [AmityUIKit4Manager.bundle, Bundle.main, Bundle(for: Self.self)]
         for bundle in bundles {
-            print("mike-configBundle:\(String(describing: bunlde))")
+            print("mike-configBundle:\(String(describing: bundle))")
             if let url = bundle.url(forResource: "AmityUIKitConfig", withExtension: "json") {
                 print("mike-configBundle: FOUND!")
                 return url
