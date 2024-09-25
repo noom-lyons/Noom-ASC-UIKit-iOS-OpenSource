@@ -54,12 +54,12 @@ struct MessageReactionBubble: View {
     
     struct ReactionLabel: View {
         
-        let image: ImageResource
+        let image: Image
         
         var body: some View {
             HStack(spacing: 2) {
                 
-                Image(image)
+                image
                     .resizable()
                     .scaledToFit()
                     .frame(width: 20, height: 20)
@@ -89,7 +89,7 @@ class MessageReactionBubbleViewModel {
         }
     }
     
-    func getReactionImage(reactionName: String) -> ImageResource {
+    func getReactionImage(reactionName: String) -> Image {
 //        if let reaction = MessageReactionConfiguration.shared.getMessageRactions().first(where: {$0.name == reactionName}) {
 //            return reaction.image
 //        } else {
