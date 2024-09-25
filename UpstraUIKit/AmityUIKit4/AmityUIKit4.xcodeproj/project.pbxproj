@@ -10,7 +10,6 @@
 		680204662B88527D00CC0CD0 /* AccessibilityID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680204652B88527D00CC0CD0 /* AccessibilityID.swift */; };
 		68124D9F2B1748DE009B5B4C /* AmityProgressBarElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68124D9E2B1748DE009B5B4C /* AmityProgressBarElement.swift */; };
 		682C76172B3208CC00018F80 /* StoryPermissionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682C76162B3208CC00018F80 /* StoryPermissionChecker.swift */; };
-		682C761B2B3302AB00018F80 /* AmityUIKitConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 682C761A2B3302AB00018F80 /* AmityUIKitConfig.json */; };
 		683DF10A2C6B1CAD005BF06C /* AmityCommunityAddUserPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683DF1092C6B1CAD005BF06C /* AmityCommunityAddUserPage.swift */; };
 		683DF10C2C6B27A4005BF06C /* AmityUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683DF10B2C6B27A4005BF06C /* AmityUserModel.swift */; };
 		683DF10E2C6B5220005BF06C /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683DF10D2C6B5220005BF06C /* UINavigationController+Extension.swift */; };
@@ -169,7 +168,6 @@
 		6862513D2B7DD3DC0097BB7E /* AmityViewStoryPageBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6862513C2B7DD3DC0097BB7E /* AmityViewStoryPageBehaviour.swift */; };
 		6868302C2C92EBE4009B1694 /* AmityCommunityMembershipPageBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6868302B2C92EBE4009B1694 /* AmityCommunityMembershipPageBehavior.swift */; };
 		686D173C2B1452A7007AEF59 /* AmityStoryTabComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686D173B2B1452A7007AEF59 /* AmityStoryTabComponent.swift */; };
-		686D173E2B1496D2007AEF59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 686D173D2B1496D2007AEF59 /* Assets.xcassets */; };
 		686D17402B149F63007AEF59 /* AmityIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686D173F2B149F63007AEF59 /* AmityIcon.swift */; };
 		686D17422B14BDFC007AEF59 /* AmityStoryRingElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686D17412B14BDFC007AEF59 /* AmityStoryRingElement.swift */; };
 		686D17442B159CDA007AEF59 /* AmityCreateNewStoryButtonElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686D17432B159CDA007AEF59 /* AmityCreateNewStoryButtonElement.swift */; };
@@ -194,9 +192,7 @@
 		68804E222C806E010081CBC9 /* AmityPendingPostsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68804E212C806E010081CBC9 /* AmityPendingPostsPage.swift */; };
 		68804E242C8083560081CBC9 /* AmityPendingPostContentComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68804E232C8083560081CBC9 /* AmityPendingPostContentComponent.swift */; };
 		688051DF2B566EED00C9BBCB /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688051DD2B566EED00C9BBCB /* Toast.swift */; };
-		688051E02B566EED00C9BBCB /* Toast.xib in Resources */ = {isa = PBXBuildFile; fileRef = 688051DE2B566EED00C9BBCB /* Toast.xib */; };
 		688051E22B5694AD00C9BBCB /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688051E12B5694AC00C9BBCB /* String+Extension.swift */; };
-		688051E52B5695B900C9BBCB /* AmityLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 688051E42B5695B900C9BBCB /* AmityLocalizable.strings */; };
 		688051E72B56962A00C9BBCB /* AmityLocalizedStringSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688051E62B56962A00C9BBCB /* AmityLocalizedStringSet.swift */; };
 		688051E92B56CFC200C9BBCB /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688051E82B56CFC200C9BBCB /* Notification+Extension.swift */; };
 		6880E6BA2B28110600F25C75 /* AmityStoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6880E6B92B28110600F25C75 /* AmityStoryModel.swift */; };
@@ -265,7 +261,6 @@
 		68F0A1F42C7DBA9B0006B549 /* AmityCommunityPostsNotificationSettingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F0A1F32C7DBA9B0006B549 /* AmityCommunityPostsNotificationSettingPage.swift */; };
 		68F0A1F62C7EFC020006B549 /* AmityCommunityCommentsNotificationSettingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F0A1F52C7EFC020006B549 /* AmityCommunityCommentsNotificationSettingPage.swift */; };
 		68F0A1F82C7F0B710006B549 /* AmityCommunityStoriesNotificationSettingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F0A1F72C7F0B710006B549 /* AmityCommunityStoriesNotificationSettingPage.swift */; };
-		68F0EE042BC6BAD3004B3AA4 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 68F0EE032BC6BAD2004B3AA4 /* PrivacyInfo.xcprivacy */; };
 		68FB408F2C3C000B006C97CC /* CommentSkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FB408E2C3C000B006C97CC /* CommentSkeletonView.swift */; };
 		68FB40912C3D5F16006C97CC /* AmitySocialHomePageBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FB40902C3D5F16006C97CC /* AmitySocialHomePageBehavior.swift */; };
 		68FB40942C3D631E006C97CC /* AmityNewsFeedComponentBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FB40932C3D631E006C97CC /* AmityNewsFeedComponentBehavior.swift */; };
@@ -428,6 +423,11 @@
 		ED08DC482BA2E8B4000DA797 /* AmityEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED08DC472BA2E8B4000DA797 /* AmityEmptyStateView.swift */; };
 		ED4FA84A2BA01123005D6871 /* AmityLiveChatHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA8492BA01123005D6871 /* AmityLiveChatHeaderViewModel.swift */; };
 		ED4FA84C2BA01169005D6871 /* ChannelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA84B2BA01169005D6871 /* ChannelManager.swift */; };
+		F0156DAA2CA4741B009C43DA /* AmityLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0156DA42CA4741B009C43DA /* AmityLocalizable.strings */; };
+		F0156DAB2CA4741B009C43DA /* AmityUIKitConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = F0156DA52CA4741B009C43DA /* AmityUIKitConfig.json */; };
+		F0156DAC2CA4741B009C43DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0156DA62CA4741B009C43DA /* Assets.xcassets */; };
+		F0156DAD2CA4741B009C43DA /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = F0156DA72CA4741B009C43DA /* PrivacyInfo.xcprivacy */; };
+		F0156DAE2CA4741B009C43DA /* Toast.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0156DA82CA4741B009C43DA /* Toast.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -444,7 +444,6 @@
 		680204652B88527D00CC0CD0 /* AccessibilityID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityID.swift; sourceTree = "<group>"; };
 		68124D9E2B1748DE009B5B4C /* AmityProgressBarElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmityProgressBarElement.swift; sourceTree = "<group>"; };
 		682C76162B3208CC00018F80 /* StoryPermissionChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPermissionChecker.swift; sourceTree = "<group>"; };
-		682C761A2B3302AB00018F80 /* AmityUIKitConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AmityUIKitConfig.json; sourceTree = "<group>"; };
 		683DF1092C6B1CAD005BF06C /* AmityCommunityAddUserPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmityCommunityAddUserPage.swift; sourceTree = "<group>"; };
 		683DF10B2C6B27A4005BF06C /* AmityUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmityUserModel.swift; sourceTree = "<group>"; };
 		683DF10D2C6B5220005BF06C /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
@@ -612,7 +611,6 @@
 		6862513C2B7DD3DC0097BB7E /* AmityViewStoryPageBehaviour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmityViewStoryPageBehaviour.swift; sourceTree = "<group>"; };
 		6868302B2C92EBE4009B1694 /* AmityCommunityMembershipPageBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmityCommunityMembershipPageBehavior.swift; sourceTree = "<group>"; };
 		686D173B2B1452A7007AEF59 /* AmityStoryTabComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmityStoryTabComponent.swift; sourceTree = "<group>"; };
-		686D173D2B1496D2007AEF59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		686D173F2B149F63007AEF59 /* AmityIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmityIcon.swift; sourceTree = "<group>"; };
 		686D17412B14BDFC007AEF59 /* AmityStoryRingElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmityStoryRingElement.swift; sourceTree = "<group>"; };
 		686D17432B159CDA007AEF59 /* AmityCreateNewStoryButtonElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmityCreateNewStoryButtonElement.swift; sourceTree = "<group>"; };
@@ -637,9 +635,7 @@
 		68804E212C806E010081CBC9 /* AmityPendingPostsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmityPendingPostsPage.swift; sourceTree = "<group>"; };
 		68804E232C8083560081CBC9 /* AmityPendingPostContentComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmityPendingPostContentComponent.swift; sourceTree = "<group>"; };
 		688051DD2B566EED00C9BBCB /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
-		688051DE2B566EED00C9BBCB /* Toast.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Toast.xib; sourceTree = "<group>"; };
 		688051E12B5694AC00C9BBCB /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		688051E42B5695B900C9BBCB /* AmityLocalizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = AmityLocalizable.strings; sourceTree = "<group>"; };
 		688051E62B56962A00C9BBCB /* AmityLocalizedStringSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmityLocalizedStringSet.swift; sourceTree = "<group>"; };
 		688051E82B56CFC200C9BBCB /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
 		6880E6B92B28110600F25C75 /* AmityStoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmityStoryModel.swift; sourceTree = "<group>"; };
@@ -711,7 +707,6 @@
 		68F0A1F32C7DBA9B0006B549 /* AmityCommunityPostsNotificationSettingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmityCommunityPostsNotificationSettingPage.swift; sourceTree = "<group>"; };
 		68F0A1F52C7EFC020006B549 /* AmityCommunityCommentsNotificationSettingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmityCommunityCommentsNotificationSettingPage.swift; sourceTree = "<group>"; };
 		68F0A1F72C7F0B710006B549 /* AmityCommunityStoriesNotificationSettingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmityCommunityStoriesNotificationSettingPage.swift; sourceTree = "<group>"; };
-		68F0EE032BC6BAD2004B3AA4 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		68FB408E2C3C000B006C97CC /* CommentSkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentSkeletonView.swift; sourceTree = "<group>"; };
 		68FB40902C3D5F16006C97CC /* AmitySocialHomePageBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmitySocialHomePageBehavior.swift; sourceTree = "<group>"; };
 		68FB40932C3D631E006C97CC /* AmityNewsFeedComponentBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmityNewsFeedComponentBehavior.swift; sourceTree = "<group>"; };
@@ -874,6 +869,11 @@
 		ED08DC472BA2E8B4000DA797 /* AmityEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmityEmptyStateView.swift; sourceTree = "<group>"; };
 		ED4FA8492BA01123005D6871 /* AmityLiveChatHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmityLiveChatHeaderViewModel.swift; sourceTree = "<group>"; };
 		ED4FA84B2BA01169005D6871 /* ChannelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelManager.swift; sourceTree = "<group>"; };
+		F0156DA42CA4741B009C43DA /* AmityLocalizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = AmityLocalizable.strings; sourceTree = "<group>"; };
+		F0156DA52CA4741B009C43DA /* AmityUIKitConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AmityUIKitConfig.json; sourceTree = "<group>"; };
+		F0156DA62CA4741B009C43DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F0156DA72CA4741B009C43DA /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		F0156DA82CA4741B009C43DA /* Toast.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Toast.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1284,11 +1284,9 @@
 				68D3A3032BDF625D0096CF79 /* Social */,
 				686251392B7DC7110097BB7E /* Story */,
 				684AE0F42B0C5B0200FD7270 /* AmityUIKit4.h */,
+				F0156DA92CA4741B009C43DA /* Resources */,
 				684AE0F52B0C5B0200FD7270 /* AmityUIKit4.docc */,
 				684AE10B2B0C5CFE00FD7270 /* AmityUIKit4.swift */,
-				686D173D2B1496D2007AEF59 /* Assets.xcassets */,
-				682C761A2B3302AB00018F80 /* AmityUIKitConfig.json */,
-				68F0EE032BC6BAD2004B3AA4 /* PrivacyInfo.xcprivacy */,
 			);
 			path = AmityUIKit4;
 			sourceTree = "<group>";
@@ -1601,7 +1599,6 @@
 				684AE1462B0C9C4B00FD7270 /* Protocols */,
 				684AE1182B0C5DBA00FD7270 /* Utilities */,
 				684097582B30940100697E1B /* Extenral */,
-				688051E32B5694D200C9BBCB /* Localization */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1631,14 +1628,6 @@
 				687A69C52B5F77ED00C17B6D /* AmityHyperLinkConfigComponent.swift */,
 			);
 			path = CreateStory;
-			sourceTree = "<group>";
-		};
-		688051E32B5694D200C9BBCB /* Localization */ = {
-			isa = PBXGroup;
-			children = (
-				688051E42B5695B900C9BBCB /* AmityLocalizable.strings */,
-			);
-			path = Localization;
 			sourceTree = "<group>";
 		};
 		6880E6B82B2810E900F25C75 /* Models */ = {
@@ -1682,7 +1671,6 @@
 				68EE71B42C1C2A58005A7002 /* ImageVideoCameraPicker.swift */,
 				6859F2272B3DE052004AEB8C /* GestureView.swift */,
 				688051DD2B566EED00C9BBCB /* Toast.swift */,
-				688051DE2B566EED00C9BBCB /* Toast.xib */,
 				6860B36B2B5A0E30009DAC66 /* CircularProgressView.swift */,
 				68DECBA42B5F9844006F034C /* InfoTextField.swift */,
 				685CE29B2B6BB2A200AF8F54 /* AsyncImage.swift */,
@@ -2399,6 +2387,18 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
+		F0156DA92CA4741B009C43DA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F0156DA42CA4741B009C43DA /* AmityLocalizable.strings */,
+				F0156DA52CA4741B009C43DA /* AmityUIKitConfig.json */,
+				F0156DA62CA4741B009C43DA /* Assets.xcassets */,
+				F0156DA72CA4741B009C43DA /* PrivacyInfo.xcprivacy */,
+				F0156DA82CA4741B009C43DA /* Toast.xib */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -2494,12 +2494,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68F0EE042BC6BAD3004B3AA4 /* PrivacyInfo.xcprivacy in Resources */,
-				688051E02B566EED00C9BBCB /* Toast.xib in Resources */,
-				686D173E2B1496D2007AEF59 /* Assets.xcassets in Resources */,
+				F0156DAA2CA4741B009C43DA /* AmityLocalizable.strings in Resources */,
 				6840982F2B313A6F00697E1B /* .gitkeep in Resources */,
-				688051E52B5695B900C9BBCB /* AmityLocalizable.strings in Resources */,
-				682C761B2B3302AB00018F80 /* AmityUIKitConfig.json in Resources */,
+				F0156DAB2CA4741B009C43DA /* AmityUIKitConfig.json in Resources */,
+				F0156DAE2CA4741B009C43DA /* Toast.xib in Resources */,
+				F0156DAC2CA4741B009C43DA /* Assets.xcassets in Resources */,
+				F0156DAD2CA4741B009C43DA /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
