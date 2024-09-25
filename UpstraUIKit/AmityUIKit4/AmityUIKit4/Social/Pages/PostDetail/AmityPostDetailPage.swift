@@ -48,7 +48,7 @@ public struct AmityPostDetailPage: AmityPageView {
         VStack(spacing: 0) {
             HStack(spacing: 0) {
                 let backIcon = AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .backButtonElement, key: "icon", of: String.self) ?? "")
-                Image(backIcon)
+                backIcon
                     .resizable()
                     .renderingMode(.template)
                     .foregroundColor(Color(viewConfig.theme.baseColor))
@@ -72,7 +72,7 @@ public struct AmityPostDetailPage: AmityPageView {
                         showBottomSheet.toggle()
                     }, label: {
                         let menuIcon = AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .menuButton, key: "icon", of: String.self) ?? "")
-                        Image(menuIcon)
+                        menuIcon
                             .resizable()
                             .renderingMode(.template)
                             .foregroundColor(Color(viewConfig.theme.baseColor))

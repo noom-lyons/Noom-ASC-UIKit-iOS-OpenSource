@@ -88,7 +88,7 @@ struct LiveChatMessageBubbleView<Content: View>: View {
     
     var deletedMessageView: some View {
         HStack(spacing: 4) {
-            Image(AmityIcon.trashBinWhiteIcon.getImageResource())
+            AmityIcon.trashBinWhiteIcon.getImageResource()
                 .renderingMode(.template)
                 .frame(width: 12, height: 16)
                 .foregroundColor(Color(viewConfig.theme.baseColor))
@@ -143,8 +143,8 @@ struct LiveChatMessageBubbleView<Content: View>: View {
         
         struct PlaceholderConfiguration {
             
-            var senderAvatar: ImageResource
-            var receiverAvatar: ImageResource
+            var senderAvatar: Image
+            var receiverAvatar: Image
             
             init(config: [String: Any]) {
                 self.senderAvatar = AmityIcon.getImageResource(named: config["sender_placeholder"] as? String ?? "chatAvatarPlaceholder")

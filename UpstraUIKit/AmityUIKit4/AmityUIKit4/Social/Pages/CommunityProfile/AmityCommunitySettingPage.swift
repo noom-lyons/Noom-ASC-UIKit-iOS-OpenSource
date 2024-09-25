@@ -169,7 +169,7 @@ public struct AmityCommunitySettingPage: AmityPageView {
     
     private var navigationBarView: some View {
         HStack(spacing: 0) {
-            Image(AmityIcon.backIcon.getImageResource())
+            AmityIcon.backIcon.getImageResource()
                 .renderingMode(.template)
                 .resizable()
                 .scaledToFit()
@@ -195,12 +195,12 @@ public struct AmityCommunitySettingPage: AmityPageView {
     }
     
     
-    func getItemView(_ icon: ImageResource, _ text: String, disclosureText: String? = nil) -> some View {
+    func getItemView(_ icon: Image, _ text: String, disclosureText: String? = nil) -> some View {
         HStack(spacing: 12) {
             Color(viewConfig.theme.baseColorShade4)
                 .frame(width: 28, height: 28)
                 .overlay (
-                    Image(icon)
+                    icon
                         .renderingMode(.template)
                         .resizable()
                         .scaledToFit()
@@ -222,7 +222,7 @@ public struct AmityCommunitySettingPage: AmityPageView {
                     .foregroundColor(Color(viewConfig.theme.baseColorShade1))
             }
             
-            Image(AmityIcon.arrowIcon.getImageResource())
+            AmityIcon.arrowIcon.getImageResource()
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 18, height: 18)

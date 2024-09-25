@@ -44,7 +44,7 @@ struct ReactionTabBarItemView: View {
                 
                 HStack {
                     if let imageResource = tabItem.image {
-                        Image(imageResource)
+                        imageResource
                             .resizable()
                             .scaledToFit()
                             .frame(width: 20, height: 20)
@@ -80,10 +80,10 @@ struct ReactionTabItem: Identifiable, Equatable {
     let id: UUID
     let index: Int
     let name: String
-    let image: ImageResource?
+    let image: Image?
     let count: Int
     
-    init(index: Int, name: String, image: ImageResource?, count: Int) {
+    init(index: Int, name: String, image: Image?, count: Int) {
         self.id = UUID()
         self.index = index
         self.name = name

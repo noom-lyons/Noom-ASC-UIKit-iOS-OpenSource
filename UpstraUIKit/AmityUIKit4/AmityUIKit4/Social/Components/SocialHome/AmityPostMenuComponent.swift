@@ -105,9 +105,9 @@ public struct AmityCreatePostMenuComponent: AmityComponentView {
     
     
     @ViewBuilder
-    private func getItemView(image: ImageResource, title: String) -> some View {
+    private func getItemView(image: Image, title: String) -> some View {
         HStack(spacing: 10) {
-            Image(image)
+            image
                 .resizable()
                 .scaledToFill()
                 .frame(width: 20, height: 20)

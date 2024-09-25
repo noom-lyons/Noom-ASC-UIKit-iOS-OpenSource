@@ -17,7 +17,7 @@ public struct EmptyCommunityFeedView: View {
     
     public var body: some View {
         VStack(spacing: 0) {
-            Image(AmityIcon.communityProfileEmptyPostIcon.imageResource)
+            AmityIcon.communityProfileEmptyPostIcon.imageResource
                 .renderingMode(.template)
                 .frame(width: 60, height: 60)
                 .foregroundColor(Color(viewConfig.theme.baseColorShade4))

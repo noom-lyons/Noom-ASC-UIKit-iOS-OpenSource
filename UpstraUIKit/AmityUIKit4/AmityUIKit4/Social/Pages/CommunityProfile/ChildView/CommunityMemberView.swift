@@ -32,7 +32,7 @@ struct CommunityMemberView: View {
                         .frame(width: 18, height: 18)
                         .clipShape(Circle())
                         .overlay(
-                            Image(AmityIcon.moderatorBadgeIcon.getImageResource())
+                            AmityIcon.moderatorBadgeIcon.getImageResource()
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: 16, height: 16)
@@ -44,7 +44,7 @@ struct CommunityMemberView: View {
                 .font(.system(size: 15, weight: .semibold))
             
             if let isBrand = communityMember.user?.isBrand, isBrand {
-                Image(AmityIcon.brandBadge.imageResource)
+                AmityIcon.brandBadge.imageResource
                     .resizable()
                     .scaledToFit()
                     .frame(width: 18, height: 18)
@@ -57,7 +57,7 @@ struct CommunityMemberView: View {
                 Button {
                     onTapAction(communityMember)
                 } label: {
-                    Image(AmityIcon.threeDotIcon.getImageResource())
+                    AmityIcon.threeDotIcon.getImageResource()
                         .renderingMode(.template)
                         .foregroundColor(Color(viewConfig.theme.baseColor))
                         .frame(width: 24, height: 18)

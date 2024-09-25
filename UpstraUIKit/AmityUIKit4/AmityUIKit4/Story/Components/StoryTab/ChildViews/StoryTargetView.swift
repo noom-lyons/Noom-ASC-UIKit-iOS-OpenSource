@@ -50,7 +50,7 @@ struct StoryTargetView<Content: View>: View {
                     .accessibilityIdentifier(AccessibilityID.Story.AmityStoryTabComponent.avatarImageView)
                 
                 if showErrorRing {
-                    Image(AmityIcon.errorStoryIcon.getImageResource())
+                    AmityIcon.errorStoryIcon.getImageResource()
                         .frame(width: 22.0, height: 22.0)
                         .offset(x: 22, y: 22)
                 } else {
@@ -60,7 +60,7 @@ struct StoryTargetView<Content: View>: View {
             }
             
             HStack(spacing: 0) {
-                Image(AmityIcon.lockBlackIcon.getImageResource())
+                AmityIcon.lockBlackIcon.getImageResource()
                     .frame(width: 20, height: 12)
                     .offset(y: -1)
                     .isHidden(hideLockIcon)

@@ -139,7 +139,7 @@ public struct AmityLiveChatMessageComposeBar: AmityComponentView {
                         textEditorViewModel.reset()
                     }
                 }, label: {
-                    Image(config.image.sendButton)
+                    config.image.sendButton
                         .resizable()
                         .scaledToFit()
                         .frame(width: 28, height: 28)
@@ -187,7 +187,7 @@ public struct AmityLiveChatMessageComposeBar: AmityComponentView {
         }
         
         struct ImageConfig {
-            let sendButton: ImageResource
+            let sendButton: Image
             
             init(config: [String: Any]) {
                 self.sendButton = AmityIcon.getImageResource(named: config["send_icon"] as? String ?? "sendIconEnable")

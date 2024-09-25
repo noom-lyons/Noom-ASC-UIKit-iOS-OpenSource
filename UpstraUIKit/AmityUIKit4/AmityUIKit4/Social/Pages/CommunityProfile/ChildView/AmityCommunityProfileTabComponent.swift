@@ -62,7 +62,7 @@ struct CommunityPageTabBarItemView: View {
             VStack(spacing: 0) {
                 
                 HStack {
-                    Image(tabItem.image)
+                    tabItem.image
                         .renderingMode(.template)
                         .scaledToFit()
                         .frame(width: 24, height: 24)
@@ -92,9 +92,9 @@ struct CommunityPageTabBarItemView: View {
 struct CommunityPageTabItem: Identifiable, Equatable {
     let id: UUID
     let index: Int
-    let image: ImageResource
+    let image: Image
     
-    init(index: Int, image: ImageResource) {
+    init(index: Int, image: Image) {
         self.id = UUID()
         self.index = index
         self.image = image

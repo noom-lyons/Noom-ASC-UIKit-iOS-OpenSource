@@ -105,7 +105,7 @@ struct MediaAttachmentView: View {
                                 .resizable()
                                 .scaledToFill()
                             
-                            Image(AmityIcon.videoControlIcon.getImageResource())
+                            AmityIcon.videoControlIcon.getImageResource()
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 40, height: 40)
@@ -120,7 +120,7 @@ struct MediaAttachmentView: View {
                         /// Display error view if mediaState is error...
                         if case .error = mediaState {
                             Color.black.opacity(0.5)
-                            Image(AmityIcon.mediaUploadErrorIcon.getImageResource())
+                            AmityIcon.mediaUploadErrorIcon.getImageResource()
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: 30, height: 30)
@@ -129,7 +129,7 @@ struct MediaAttachmentView: View {
                         /// Display error view if network is not connected...
                         if !networkMonitor.isConnected {
                             Color.black.opacity(0.5)
-                            Image(AmityIcon.mediaUploadErrorIcon.getImageResource())
+                            AmityIcon.mediaUploadErrorIcon.getImageResource()
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: 30, height: 30)
@@ -141,7 +141,7 @@ struct MediaAttachmentView: View {
             Button(action: {
                 removeAction()
             }, label: {
-                Image(AmityIcon.backgroundedCloseIcon.getImageResource())
+                AmityIcon.backgroundedCloseIcon.getImageResource()
                     .resizable()
                     .scaledToFill()
                     .frame(size: CGSize(width: 24, height: 24))

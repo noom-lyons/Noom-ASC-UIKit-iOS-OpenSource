@@ -28,7 +28,7 @@ struct CategoryGridView: View {
                     .foregroundColor(Color(viewConfig.theme.baseColor))
                     .frame(maxWidth: UIScreen.main.bounds.width - 130)
                 
-                Image(AmityIcon.closeIcon.getImageResource())
+                AmityIcon.closeIcon.getImageResource()
                     .renderingMode(.template)
                     .resizable()
                     .aspectRatio(contentMode: .fill)

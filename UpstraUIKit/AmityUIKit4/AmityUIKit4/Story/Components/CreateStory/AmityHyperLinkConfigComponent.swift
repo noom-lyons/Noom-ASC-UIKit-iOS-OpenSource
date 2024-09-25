@@ -173,7 +173,7 @@ public struct AmityHyperLinkConfigComponent: AmityComponentView {
                 isRemoveLinkAlertShown.toggle()
             }, label: {
                 HStack(spacing: 0) {
-                    Image(AmityIcon.trashBinRedIcon.getImageResource())
+                    AmityIcon.trashBinRedIcon.getImageResource()
                         .frame(width: 20, height: 20)
                         .padding(.trailing, 6)
                     Text("Remove link")

@@ -134,7 +134,7 @@ public struct AmityCommunityProfilePage: AmityPageView {
                                 }
                             }, label: {
                                 HStack(spacing: 8) {
-                                    Image(AmityIcon.plusIcon.imageResource)
+                                    AmityIcon.plusIcon.imageResource
                                         .renderingMode(.template)
                                         .scaledToFit()
                                         .frame(width: 20, height: 20)
@@ -231,7 +231,7 @@ extension AmityCommunityProfilePage {
                     .fill(Color(viewConfig.theme.primaryColor))
                     .clipShape(RoundedCorner())
                     .frame(width: 64, height: 64)
-                Image(AmityIcon.plusIcon.imageResource)
+                AmityIcon.plusIcon.imageResource
                     .resizable()
                     .renderingMode(.template)
                     .frame(width: 32, height: 32)
@@ -246,7 +246,7 @@ extension AmityCommunityProfilePage {
             VStack {
                 HStack(spacing: 12) {
                     // Post
-                    Image(AmityIcon.createPostMenuIcon.getImageResource())
+                    AmityIcon.createPostMenuIcon.getImageResource()
                         .renderingMode(.template)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
@@ -271,7 +271,7 @@ extension AmityCommunityProfilePage {
                 // Story
                 if viewModel.hasStoryManagePermission {
                     HStack(spacing: 12) {
-                        Image(AmityIcon.createStoryMenuIcon.getImageResource())
+                        AmityIcon.createStoryMenuIcon.getImageResource()
                             .renderingMode(.template)
                             .resizable()
                             .aspectRatio(contentMode: .fill)
@@ -308,7 +308,7 @@ extension AmityCommunityProfilePage {
         HStack(spacing: 0) {
             
             let backIcon = AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .backButtonElement, key: "image", of: String.self) ?? "")
-            Image(backIcon)
+            backIcon
                 .renderingMode(.template)
                 .scaledToFit()
                 .frame(width: 24, height: 24)
@@ -328,7 +328,7 @@ extension AmityCommunityProfilePage {
                 HStack {
                     if !community.isPublic {
                         let lockIcon = AmityIcon.lockBlackIcon.imageResource
-                        Image(lockIcon)
+                        lockIcon
                             .renderingMode(.template)
                             .frame(width: 20, height: 20)
                             .foregroundColor(Color(viewConfig.theme.baseColor))
@@ -342,7 +342,7 @@ extension AmityCommunityProfilePage {
                     
                     if community.isOfficial {
                         let verifiedBadgeIcon = AmityIcon.verifiedBadge.imageResource
-                        Image(verifiedBadgeIcon)
+                        verifiedBadgeIcon
                             .resizable()
                             .scaledToFill()
                             .frame(width: 20, height: 20)
@@ -357,7 +357,7 @@ extension AmityCommunityProfilePage {
             Spacer()
             let menuIcon = AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .menuButton, key: "image", of: String.self) ?? "")
 
-            Image(menuIcon)
+            menuIcon
                 .renderingMode(.template)
                 .scaledToFit()
                 .frame(width: 24, height: 24)

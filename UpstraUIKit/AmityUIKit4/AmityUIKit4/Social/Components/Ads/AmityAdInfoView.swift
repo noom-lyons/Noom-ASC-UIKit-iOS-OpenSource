@@ -40,7 +40,7 @@ struct AmityAdInfoView: View {
                 .padding(.top, 24)
             
             HStack(alignment: .top) {
-                Image(AmityIcon.infoIcon.imageResource)
+                AmityIcon.infoIcon.imageResource
                     .padding(.top, 2)
                 
                 Text("You're seeing this advertisement because it was displayed to all users in the system.")
@@ -57,7 +57,7 @@ struct AmityAdInfoView: View {
                 .padding(.top, 24)
             
             HStack(alignment: .top) {
-                Image(AmityIcon.infoIcon.imageResource)
+                AmityIcon.infoIcon.imageResource
                     .padding(.top, 2)
 
                 Text("Advertiser name: \(advertiserName)")

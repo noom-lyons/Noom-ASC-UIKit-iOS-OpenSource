@@ -52,7 +52,7 @@ struct CommunityMemberTabView: View {
     
     private var searchMemberView: some View {
         HStack(spacing: 8) {
-            Image(AmityIcon.searchIcon.getImageResource())
+            AmityIcon.searchIcon.getImageResource()
                 .renderingMode(.template)
                 .resizable()
                 .scaledToFill()

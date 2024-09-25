@@ -78,7 +78,7 @@ public struct AmityCommentView: View {
                     Button {
                         showSheet.toggle()
                     } label: {
-                        Image(AmityIcon.commentFailedIcon.getImageResource())
+                        AmityIcon.commentFailedIcon.getImageResource()
                             .resizable()
                             .frame(width: 15, height: 15)
                             .padding(.bottom, 5)
@@ -133,7 +133,7 @@ public struct AmityCommentView: View {
                         Button {
                             commentButtonAction(.meatball(comment))
                         } label: {
-                            Image(AmityIcon.meetballIcon.getImageResource())
+                            AmityIcon.meetballIcon.getImageResource()
                                 .frame(width: 20, height: 16)
                         }
                         
@@ -149,7 +149,7 @@ public struct AmityCommentView: View {
                             .foregroundColor(Color(viewConfig.theme.baseColorShade2))
                             .accessibilityIdentifier(AccessibilityID.AmityCommentTrayComponent.CommentBubble.reactionCountTextView)
                         
-                        Image(AmityIcon.likeReactionIcon.getImageResource())
+                        AmityIcon.likeReactionIcon.getImageResource()
                             .resizable()
                             .frame(width: 17, height: 17)
                     }
@@ -171,7 +171,7 @@ public struct AmityCommentView: View {
     @ViewBuilder
     func getModeratorBadgeView() -> some View {
         HStack(spacing: 3) {
-            Image(AmityIcon.moderatorBadgeIcon.getImageResource())
+            AmityIcon.moderatorBadgeIcon.getImageResource()
                 .resizable()
                 .frame(width: 12, height: 12)
                 .padding(.leading, 6)

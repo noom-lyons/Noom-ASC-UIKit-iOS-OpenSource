@@ -96,7 +96,7 @@ public extension AmityLiveChatHeader {
         
         public var body: some View {
             HStack(alignment: .center, spacing: 0) {
-                Image(AmityIcon.Chat.membersCount.imageResource)
+                AmityIcon.Chat.membersCount.imageResource
                     .renderingMode(.template)
                     .resizable()
                     .scaledToFit()

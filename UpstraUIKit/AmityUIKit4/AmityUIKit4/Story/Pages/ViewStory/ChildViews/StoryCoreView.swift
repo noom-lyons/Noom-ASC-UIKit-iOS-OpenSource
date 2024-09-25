@@ -209,7 +209,7 @@ struct StoryCoreView: View, AmityViewIdentifiable {
                         }
                         .accessibilityIdentifier(AccessibilityID.Story.AmityViewStoryPage.communityDisplayNameTextView)
                     
-                    Image(AmityIcon.verifiedWhiteBadge.getImageResource())
+                    AmityIcon.verifiedWhiteBadge.getImageResource()
                         .resizable()
                         .frame(width: 20, height: 20)
                         .offset(x: -5)
@@ -241,7 +241,7 @@ struct StoryCoreView: View, AmityViewIdentifiable {
         let muteIcon = AmityIcon.getImageResource(named: getConfig(pageId: .storyPage, elementId: .muteUnmuteButtonElement, key: "mute_icon", of: String.self) ?? "")
         let unmuteIcon = AmityIcon.getImageResource(named: getConfig(pageId: .storyPage, elementId: .muteUnmuteButtonElement, key: "unmute_icon", of: String.self) ?? "")
         let color = Color(UIColor(hex: getConfig(pageId: .storyPage, elementId: .muteUnmuteButtonElement, key: "background_color", of: String.self) ?? ""))
-        return Image(muteVideo ? muteIcon
+        return (muteVideo ? muteIcon
               : unmuteIcon)
         .frame(width: 32, height: 32)
         .background(color)
@@ -255,7 +255,7 @@ struct StoryCoreView: View, AmityViewIdentifiable {
     
     func getHyperLinkView(data: HyperLinkModel, story: AmityStoryModel) -> some View {
         HStack(spacing: 0) {
-            Image(AmityIcon.hyperLinkBlueIcon.getImageResource())
+            AmityIcon.hyperLinkBlueIcon.getImageResource()
                 .frame(width: 20, height: 20)
                 .padding(EdgeInsets(top: 0, leading: 12, bottom: 0, trailing: 8))
             
@@ -338,7 +338,7 @@ struct StoryCoreView: View, AmityViewIdentifiable {
                     .accessibilityIdentifier(AccessibilityID.Story.AmityViewStoryPage.reachButtonTextView)
             } icon: {
                 let icon = AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .impressionIconElement, key: "impression_icon", of: String.self) ?? "")
-                Image(icon)
+                icon
                     .frame(width: 20, height: 16)
                     .padding(.trailing, -4)
             }
@@ -352,7 +352,7 @@ struct StoryCoreView: View, AmityViewIdentifiable {
             let commentBtnBgColor = Color(UIColor(hex: viewConfig.getConfig(elementId: .storyCommentButtonElement, key: "background_color", of: String.self) ?? "#FFFFFF"))
             HStack(spacing: 0) {
                 let icon = AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .storyCommentButtonElement, key: "comment_icon", of: String.self) ?? "")
-                Image(icon)
+                icon
                     .frame(width: 20, height: 16)
                     .padding(.leading, 10)
                     .padding(.trailing, 4)
@@ -380,7 +380,7 @@ struct StoryCoreView: View, AmityViewIdentifiable {
             HStack(spacing: 0) {
                 let icon = AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .storyReactionButtonElement, key: "reaction_icon", of: String.self) ?? "")
                 let likedIcon = AmityIcon.likeReactionIcon.getImageResource()
-                Image(story.isLiked ? likedIcon : icon)
+                (story.isLiked ? likedIcon : icon)
                     .frame(width: 20, height: 16)
                     .padding(.leading, 10)
                     .padding(.trailing, 4)
@@ -423,7 +423,7 @@ struct StoryCoreView: View, AmityViewIdentifiable {
     
     func getFailedStoryBanner(_ storyModel: AmityStoryModel) -> some View {
         HStack(alignment: .center, spacing: 0) {
-            Image(AmityIcon.statusWarningIcon.getImageResource())
+            AmityIcon.statusWarningIcon.getImageResource()
                 .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 8))
             Text(AmityLocalizedStringSet.Story.failedStoryBannerMessage.localizedString)
                 .font(.system(size: 15))
@@ -494,7 +494,7 @@ struct StoryCoreView: View, AmityViewIdentifiable {
                 
                 host.controller?.present(alertViewController, animated: true)
             }, label: {
-                Image(AmityIcon.threeDotIcon.getImageResource())
+                AmityIcon.threeDotIcon.getImageResource()
                     .padding(.trailing, 16)
             })
         }

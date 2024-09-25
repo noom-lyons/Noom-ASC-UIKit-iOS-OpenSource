@@ -88,7 +88,7 @@ public struct AmityCreateStoryPage: AmityPageView {
                     
                     VStack {
                         HStack {
-                            Image(AmityIcon.getImageResource(named: getElementConfig(elementId: .closeButtonElement, key: "close_icon", of: String.self) ?? ""))
+                            AmityIcon.getImageResource(named: getElementConfig(elementId: .closeButtonElement, key: "close_icon", of: String.self) ?? "")
                                 .setModifier(offset: (x: 16, y: 16),
                                              contentMode: .fill,
                                              frame: CGSize(width: 32, height: 32))
@@ -99,7 +99,7 @@ public struct AmityCreateStoryPage: AmityPageView {
                             
                             Spacer()
                             
-                            Image(cameraFlashMode == .auto ? AmityIcon.flashOnIcon.getImageResource()
+                            (cameraFlashMode == .auto ? AmityIcon.flashOnIcon.getImageResource()
                                   : AmityIcon.flashOffIcon.getImageResource())
                             .setModifier(offset: (x: -16, y: 16),
                                          contentMode: .fill,
@@ -114,7 +114,7 @@ public struct AmityCreateStoryPage: AmityPageView {
                             Button {
                                 showImageVideoPicker = true
                             } label: {
-                                Image(AmityIcon.galleryIcon.getImageResource())
+                                AmityIcon.galleryIcon.getImageResource()
                                     .setModifier(offset: (x: 20, y: -40),
                                                  contentMode: .fill,
                                                  frame: CGSize(width: 40, height: 40))
@@ -139,7 +139,7 @@ public struct AmityCreateStoryPage: AmityPageView {
                                 let cameraDevice = cameraManager.cameraDevice
                                 cameraManager.cameraDevice = cameraDevice == .front ? .back : .front
                             } label: {
-                                Image(AmityIcon.flipCameraIcon.getImageResource())
+                                AmityIcon.flipCameraIcon.getImageResource()
                                     .setModifier(offset: (x: -20, y: -40),
                                                  contentMode: .fill,
                                                  frame: CGSize(width: 40, height: 40))
@@ -194,7 +194,7 @@ public struct AmityCreateStoryPage: AmityPageView {
             captureImage()
             
         } label: {
-            Image(AmityIcon.cameraShutterIcon.getImageResource())
+            AmityIcon.cameraShutterIcon.getImageResource()
                 .frame(width: 72, height: 72)
                 .offset(x: 0, y: -32)
         }
@@ -206,7 +206,7 @@ public struct AmityCreateStoryPage: AmityPageView {
     func getVideoCaptureButtonView() -> some View {
         Button {} label: {
             ZStack {
-                Image(videoCaptureButtonSelected ?
+                (videoCaptureButtonSelected ?
                       AmityIcon.videoShutterRecordingIcon.getImageResource()
                       : AmityIcon.videoShutterIcon.getImageResource())
                 Circle()

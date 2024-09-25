@@ -54,7 +54,7 @@ public struct AmitySocialHomeTopNavigationComponent: AmityComponentView {
             }, label: {
                 VStack {
                     let test4 = AmityIcon.getImageResource(named: AmityIcon.searchIcon.rawValue)
-                    Image(test4)
+                    test4
                         .frame(size: CGSize(width: 21.0, height: 16.0))
 //                    if let test1 = UIImage(named: AmityIcon.searchIcon.rawValue) {
 //                        Image(uiImage: test1)
@@ -91,7 +91,7 @@ public struct AmitySocialHomeTopNavigationComponent: AmityComponentView {
                 }, label: {
                     VStack {
                         let createButtonIcon = AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .postCreationButton, key: "icon", of: String.self) ?? "")
-                        Image(createButtonIcon)
+                        createButtonIcon
                             .frame(size: CGSize(width: 21.0, height: 16.0))
                     }
                     .frame(size: CGSize(width: 32.0, height: 32.0))

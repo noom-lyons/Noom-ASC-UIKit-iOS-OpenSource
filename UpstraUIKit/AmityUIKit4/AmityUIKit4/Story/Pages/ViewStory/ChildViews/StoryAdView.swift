@@ -27,7 +27,7 @@ struct StoryAdView<Content: View>: View {
                 GeometryReader { geometry in
                     KFImage.url(URL(string: ad.image9_16?.largeFileURL ?? ""))
                             .placeholder({
-                                Image(AmityIcon.adAvatarPlaceholder.imageResource)
+                                AmityIcon.adAvatarPlaceholder.imageResource
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .background(Color.red.opacity(0.1))
@@ -51,7 +51,7 @@ struct StoryAdView<Content: View>: View {
                 /// Call to action view
                 if !ad.callToAction.isEmpty && !ad.callToActionUrl.isEmpty {
                     VStack(alignment: .center, spacing: 12) {
-                        Image(AmityIcon.upArrowIcon.getImageResource())
+                        AmityIcon.upArrowIcon.getImageResource()
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 30, height: 10)
@@ -86,7 +86,7 @@ struct StoryAdView<Content: View>: View {
                     Button {
                         showAdInfo.toggle()
                     } label: {
-                        Image(AmityIcon.infoIcon.imageResource)
+                        AmityIcon.infoIcon.imageResource
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .foregroundColor(Color(viewConfig.defaultLightTheme.baseColorShade3))

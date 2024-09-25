@@ -80,7 +80,7 @@ public struct AmityCommunityAddCategoryPage: AmityPageView {
     
     private var navigationBarView: some View {
         HStack(spacing: 0) {
-            Image(AmityIcon.closeIcon.getImageResource())
+            AmityIcon.closeIcon.getImageResource()
                 .renderingMode(.template)
                 .resizable()
                 .scaledToFit()
@@ -156,7 +156,7 @@ public struct AmityCommunityAddCategoryPage: AmityPageView {
                         .frame(width: 16, height: 16)
                         .isHidden(isSelected)
                     
-                    Image(AmityIcon.checkboxIcon.getImageResource())
+                    AmityIcon.checkboxIcon.getImageResource()
                         .frame(width: 22, height: 22)
                         .isHidden(!isSelected)
                         .offset(x: 3)

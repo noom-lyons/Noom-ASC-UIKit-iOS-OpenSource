@@ -20,12 +20,14 @@ public struct AmityEmptyStateView: View {
     public var body: some View {
         VStack(spacing: 0) {
             if let icon = configuration.image {
-                Image(ImageResource(name: icon, bundle: AmityUIKit4Manager.bundle))
-                    .renderingMode(.template)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(size: configuration.iconSize)
-                    .foregroundColor(Color(viewConfig.theme.baseColorShade2))
+                if #available(iOS 17.0, *) {
+                    Image(ImageResource(name: icon, bundle: AmityUIKit4Manager.bundle))
+                        .renderingMode(.template)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(size: configuration.iconSize)
+                        .foregroundColor(Color(viewConfig.theme.baseColorShade2))
+                }
             }
             
             if let title = configuration.title {

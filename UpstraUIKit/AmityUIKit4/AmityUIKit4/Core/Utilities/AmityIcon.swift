@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 enum AmityIcon: String, ImageResourceProvider {
     // MARK: Story
@@ -152,38 +153,40 @@ enum AmityIcon: String, ImageResourceProvider {
         return UIImage(named: self.rawValue, in: AmityUIKit4Manager.bundle, compatibleWith: nil)
     }
     
-    func getImageResource() -> ImageResource {
-        return ImageResource(name: self.rawValue, bundle: AmityUIKit4Manager.bundle)
+    func getImageResource() -> Image {
+        if #available(iOS 17.0, *) {
+            return Image(ImageResource(name: self.rawValue, bundle: AmityUIKit4Manager.bundle))
+        } else {
+            return Image(self.rawValue, bundle: AmityUIKit4Manager.bundle)
+        }
     }
     
     static func getImage(named: String) -> UIImage? {
         return UIImage(named: named, in: AmityUIKit4Manager.bundle, compatibleWith: nil)
     }
     
-    static func getImageResource(named: String) -> ImageResource {
-        return ImageResource(name: named, bundle: AmityUIKit4Manager.bundle)
+    static func getImageResource(named: String) -> Image {
+        if #available(iOS 17.0, *) {
+            return Image(ImageResource(name: named, bundle: AmityUIKit4Manager.bundle))
+        } else {
+            return Image(named, bundle: AmityUIKit4Manager.bundle)
+        }
     }
     
 }
 
 protocol ImageResourceProvider: RawRepresentable {
     
-    var imageResource: ImageResource { get }
+    var imageResource: Image { get }
 }
 
 extension ImageResourceProvider where Self.RawValue == String {
     
-    var imageResource: ImageResource {
-        let bundles = [AmityUIKit4Manager.bundle, Bundle.main, Bundle(for: AmityMessageAction.self)]
-        for bundle in bundles {
-            let name = self.rawValue
-            print("mike-try-name:\(name)-bundle:\(bundle.debugDescription)")
-            if let url = bundle.url(forResource: name, withExtension: ".svg") {
-                print("mike-Found image! \(url.debugDescription)")
-                return ImageResource(name: name, bundle: bundle)
-            }
+    var imageResource: Image {
+        if #available(iOS 17.0, *) {
+            return Image(ImageResource(name: self.rawValue, bundle: AmityUIKit4Manager.bundle))
+        } else {
+            return Image(self.rawValue, bundle: AmityUIKit4Manager.bundle)
         }
-        print("mike-Did not find image")
-        return ImageResource(name: self.rawValue, bundle: AmityUIKit4Manager.bundle)
     }
 }

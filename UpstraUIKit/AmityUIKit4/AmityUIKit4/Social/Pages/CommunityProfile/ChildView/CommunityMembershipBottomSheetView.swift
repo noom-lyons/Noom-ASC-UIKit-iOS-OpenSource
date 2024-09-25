@@ -92,9 +92,9 @@ struct CommunityMembershipBottomSheetView: View {
         }
     }
     
-    private func getItemView(_ icon: ImageResource, text: String, isDestructive: Bool = false) -> some View {
+    private func getItemView(_ icon: Image, text: String, isDestructive: Bool = false) -> some View {
         HStack(spacing: 12) {
-            Image(icon)
+            icon
                 .renderingMode(.template)
                 .resizable()
                 .scaledToFit()

@@ -46,7 +46,7 @@ public struct AmityCommunityHeaderComponent: AmityComponentView {
             HStack(alignment: .top, spacing: 3) {
                 if !community.isPublic {
                     let lockIcon = AmityIcon.lockBlackIcon.imageResource
-                    Image(lockIcon)
+                    lockIcon
                         .renderingMode(.template)
                         .frame(width: 20, height: 20)
                         .foregroundColor(Color(viewConfig.theme.baseColor))
@@ -63,7 +63,7 @@ public struct AmityCommunityHeaderComponent: AmityComponentView {
                 if community.isOfficial {
                     let verifiedBadgeIcon = AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .communityVerifyBadge, key: "image", of: String.self) ?? "")
 
-                    Image(verifiedBadgeIcon)
+                    verifiedBadgeIcon
                         .resizable()
                         .scaledToFill()
                         .frame(width: 20, height: 20)
@@ -124,7 +124,7 @@ public struct AmityCommunityHeaderComponent: AmityComponentView {
                 HStack(spacing: 8) {
                     let plusIcon = AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .communityJoinButton, key: "image", of: String.self) ?? "")
 
-                    Image(plusIcon)
+                    plusIcon
                         .renderingMode(.template)
                         .scaledToFit()
                         .frame(width: 20, height: 20)
@@ -148,7 +148,7 @@ public struct AmityCommunityHeaderComponent: AmityComponentView {
             VStack(alignment: .center) {
                 let pendingPostCountString = viewModel.pendingPostCount == 1 ? "" : "s"
                 HStack(alignment: .center,spacing: 7) {
-                    Image(AmityIcon.communityPendingPostIcon.imageResource)
+                    AmityIcon.communityPendingPostIcon.imageResource
                         .renderingMode(.template)
                         .scaledToFit()
                         .frame(width: 6, height: 6)

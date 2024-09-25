@@ -30,7 +30,7 @@ public struct AmityUserSearchResultComponent: AmityComponentView {
         ZStack {
             if viewModel.users.isEmpty && viewModel.loadingState == .loaded {
                 VStack(spacing: 15) {
-                    Image(AmityIcon.noSearchableIcon.getImageResource())
+                    AmityIcon.noSearchableIcon.getImageResource()
                         .resizable()
                         .scaledToFit()
                         .frame(width: 60, height: 60)
@@ -103,7 +103,7 @@ struct UserCellView: View {
                 .foregroundColor(Color(viewConfig.theme.baseColor))
                 .padding(.leading, 16)
                         
-            Image(AmityIcon.brandBadge.imageResource)
+            AmityIcon.brandBadge.imageResource
                 .resizable()
                 .scaledToFit()
                 .frame(width: 18, height: 18)

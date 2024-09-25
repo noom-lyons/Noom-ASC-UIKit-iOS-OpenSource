@@ -168,7 +168,7 @@ public struct AmityPostComposerPage: AmityPageView {
     private var navigationBarView: some View {
         HStack(spacing: 0) {
             let closeIcon = viewConfig.getConfig(elementId: .closeButtonElement, key: "image", of: String.self) ?? ""
-            Image(AmityIcon.getImageResource(named: closeIcon))
+            AmityIcon.getImageResource(named: closeIcon)
                 .renderingMode(.template)
                 .resizable()
                 .scaledToFit()

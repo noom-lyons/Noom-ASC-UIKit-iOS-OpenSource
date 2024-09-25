@@ -55,7 +55,7 @@ public struct AmityLiveChatMessageReactionPicker: AmityElementView {
                             .clipShape(Circle())
                             .opacity(viewModel.message.myReactions.contains(where: {$0 == reaction.name}) ? 1 : 0)
                         
-                        Image(reaction.image)
+                        reaction.image
                             .resizable()
                             .scaledToFit()
                             .frame(width: 32, height: 32)

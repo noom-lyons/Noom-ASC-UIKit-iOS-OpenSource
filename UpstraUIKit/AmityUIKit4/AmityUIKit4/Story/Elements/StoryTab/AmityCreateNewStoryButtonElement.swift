@@ -24,7 +24,7 @@ struct AmityCreateNewStoryButtonElement: AmityElementView {
     
     var body: some View {
         AmityView(configId: configId,
-                  config: { configDict -> (backgroundColor: Color, createStoryIcon: ImageResource) in
+                  config: { configDict -> (backgroundColor: Color, createStoryIcon: Image) in
             
             let backgroundColor = Color(UIColor(hex: configDict["background_color"] as? String ?? "#000000"))
             
@@ -39,7 +39,7 @@ struct AmityCreateNewStoryButtonElement: AmityElementView {
                     Circle()
                         .fill(config.backgroundColor)
                     
-                    Image(config.createStoryIcon)
+                    config.createStoryIcon
                         .resizable()
                         .frame(width: geometry.size.width - 3, height: geometry.size.height - 3)
                 }

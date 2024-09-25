@@ -49,7 +49,7 @@ struct TargetSelectionView<Content: View>: View {
                                     
                                     if !community.isPublic {
                                         let lockIcon = AmityIcon.getImageResource(named: "lockBlackIcon")
-                                        Image(lockIcon)
+                                        lockIcon
                                             .frame(width: 20, height: 12)
                                             .offset(y: -1)
                                             .isHidden(viewConfig.isHidden(elementId: .communityPrivateBadge))
@@ -57,7 +57,7 @@ struct TargetSelectionView<Content: View>: View {
                                     
                                     if community.isOfficial {
                                         let verifiedBadgeIcon = AmityIcon.getImageResource(named: "verifiedBadge")
-                                        Image(verifiedBadgeIcon)
+                                        verifiedBadgeIcon
                                             .resizable()
                                             .scaledToFill()
                                             .frame(width: 12, height: 12)

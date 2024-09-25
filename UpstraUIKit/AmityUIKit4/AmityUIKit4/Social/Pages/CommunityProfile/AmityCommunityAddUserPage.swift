@@ -88,7 +88,7 @@ public struct AmityCommunityAddUserPage: AmityPageView {
     
     private var navigationBarView: some View {
         HStack(spacing: 0) {
-            Image(AmityIcon.closeIcon.getImageResource())
+            AmityIcon.closeIcon.getImageResource()
                 .renderingMode(.template)
                 .resizable()
                 .scaledToFit()
@@ -114,7 +114,7 @@ public struct AmityCommunityAddUserPage: AmityPageView {
     
     private var searchUserView: some View {
         HStack(spacing: 8) {
-            Image(AmityIcon.searchIcon.getImageResource())
+            AmityIcon.searchIcon.getImageResource()
                 .renderingMode(.template)
                 .resizable()
                 .scaledToFill()
@@ -148,7 +148,7 @@ public struct AmityCommunityAddUserPage: AmityPageView {
                                 .fill(.black.opacity(0.3))
                                 .frame(width: 18, height: 18)
                                 .overlay(
-                                    Image(AmityIcon.closeIcon.getImageResource())
+                                    AmityIcon.closeIcon.getImageResource()
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
                                         .frame(width: 18, height: 18)
@@ -183,7 +183,7 @@ public struct AmityCommunityAddUserPage: AmityPageView {
                     .foregroundColor(Color(viewConfig.theme.baseColor))
                 
                 if user.isBrand {
-                    Image(AmityIcon.brandBadge.imageResource)
+                    AmityIcon.brandBadge.imageResource
                         .resizable()
                         .scaledToFit()
                         .frame(width: 18, height: 18)
@@ -199,7 +199,7 @@ public struct AmityCommunityAddUserPage: AmityPageView {
                         .frame(width: 16, height: 16)
                         .isHidden(isSelected)
                     
-                    Image(AmityIcon.checkboxIcon.getImageResource())
+                    AmityIcon.checkboxIcon.getImageResource()
                         .frame(width: 22, height: 22)
                         .isHidden(!isSelected)
                         .offset(x: 3)

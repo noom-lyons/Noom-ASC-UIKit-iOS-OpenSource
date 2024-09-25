@@ -25,7 +25,7 @@ public struct AmityEmptyNewsFeedComponent: AmityComponentView {
     public var body: some View {
         VStack(spacing: 0) {
             let emptyNewsfeedIcon = AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .illustration, key: "icon", of: String.self) ?? "")
-            Image(emptyNewsfeedIcon)
+            emptyNewsfeedIcon
                 .resizable()
                 .frame(size: CGSize(width: UIScreen.main.bounds.size.height / 4, height: UIScreen.main.bounds.size.height / 4))
                 .isHidden(viewConfig.isHidden(elementId: .illustration))
@@ -46,7 +46,7 @@ public struct AmityEmptyNewsFeedComponent: AmityComponentView {
             let exploreCommunityButtonIcon = AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .exploreCommunittiesButton, key: "icon", of: String.self) ?? "")
             let exploreCommunityButtonText = viewConfig.getConfig(elementId: .exploreCommunittiesButton, key: "text", of: String.self) ?? ""
             HStack(alignment: .center, spacing: 8) {
-                Image(exploreCommunityButtonIcon)
+                exploreCommunityButtonIcon
                     .resizable()
                     .frame(size: CGSize(width: 20.0, height: 20.0))
                     .padding(.leading, 24)

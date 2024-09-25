@@ -44,7 +44,7 @@ public struct AmityPendingPostsPage: AmityPageView {
     
     private var navigationBarView: some View {
         HStack(spacing: 0) {
-            Image(AmityIcon.backIcon.getImageResource())
+            AmityIcon.backIcon.getImageResource()
                 .renderingMode(.template)
                 .resizable()
                 .scaledToFit()
@@ -73,7 +73,7 @@ public struct AmityPendingPostsPage: AmityPageView {
         VStack(spacing: 8) {
             Spacer()
             
-            Image(AmityIcon.emptyPendingPostIcon.getImageResource())
+            AmityIcon.emptyPendingPostIcon.getImageResource()
                 .resizable()
                 .scaledToFit()
                 .frame(width: 60, height: 60)

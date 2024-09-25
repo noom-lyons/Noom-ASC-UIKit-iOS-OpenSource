@@ -145,13 +145,13 @@ public struct AmityMediaAttachmentComponent: AmityComponentView {
     
     
     @ViewBuilder
-    private func getItemView(image: ImageResource, isHidden: Bool, onTapAction: @escaping () -> Void) -> some View {
+    private func getItemView(image: Image, isHidden: Bool, onTapAction: @escaping () -> Void) -> some View {
         let isDisable = viewModel.medias.count >= 10
         Rectangle()
             .fill(Color(viewConfig.defaultLightTheme.baseColorShade4))
             .frame(width: 32, height: 32)
             .overlay (
-                Image(image)
+                image
                     .renderingMode(.template)
                     .resizable()
                     .scaledToFill()

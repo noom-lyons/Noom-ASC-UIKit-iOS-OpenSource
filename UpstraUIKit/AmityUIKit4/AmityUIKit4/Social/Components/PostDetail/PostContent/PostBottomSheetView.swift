@@ -81,7 +81,7 @@ struct PostBottomSheetView: View {
     
     private var deleteSheetButton: some View {
         HStack(spacing: 12) {
-            Image(AmityIcon.trashBinIcon.getImageResource())
+            AmityIcon.trashBinIcon.getImageResource()
                 .renderingMode(.template)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
@@ -105,7 +105,7 @@ struct PostBottomSheetView: View {
     
     private var flagSheetButton: some View {
         HStack(spacing: 12) {
-            Image(AmityIcon.flagIcon.getImageResource())
+            AmityIcon.flagIcon.getImageResource()
                 .renderingMode(.template)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
@@ -144,7 +144,7 @@ struct PostBottomSheetView: View {
     
     private var editSheetButton: some View {
         HStack(spacing: 12) {
-            Image(AmityIcon.editCommentIcon.getImageResource())
+            AmityIcon.editCommentIcon.getImageResource()
                 .renderingMode(.template)
                 .resizable()
                 .aspectRatio(contentMode: .fill)

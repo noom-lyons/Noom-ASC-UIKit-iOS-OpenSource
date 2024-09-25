@@ -10,7 +10,7 @@ import SwiftUI
 struct MessageAvatarView: View {
     
     let message: MessageModel
-    let placeholderIcon: ImageResource
+    let placeholderIcon: Image
     
     var body: some View {
         AsyncImage(placeholder: placeholderIcon, url: message.avatarURL, contentMode: .fill)

@@ -11,11 +11,11 @@ struct PrivacyRadioButtonView: View {
     @EnvironmentObject private var viewConfig: AmityViewConfigController
     
     private let isSelected: Bool
-    private let icon: ImageResource
+    private let icon: Image
     private let title: String
     private let description: String
     
-    init(isSelected: Bool, icon: ImageResource, title: String, description: String) {
+    init(isSelected: Bool, icon: Image, title: String, description: String) {
         self.isSelected = isSelected
         self.icon = icon
         self.title = title
@@ -30,7 +30,7 @@ struct PrivacyRadioButtonView: View {
                     .fill(Color(viewConfig.theme.baseColorShade4))
                     .clipShape(Circle())
                     .overlay (
-                        Image(icon)
+                        icon
                             .renderingMode(.template)
                             .resizable()
                             .foregroundColor(Color(viewConfig.theme.baseColor))

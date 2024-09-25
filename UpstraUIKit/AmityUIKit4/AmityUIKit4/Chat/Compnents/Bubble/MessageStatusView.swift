@@ -46,7 +46,7 @@ struct MessageStatusView: View {
             }
             
             if message.flagCount > 0 && (viewModel.isReportedByMe || (message.isFlaggedByMe ?? false)) {
-                Image(AmityIcon.Chat.redFlagIcon.imageResource)
+                AmityIcon.Chat.redFlagIcon.imageResource
                     .scaledToFit()
                     .padding(.bottom, 6)
                     .padding(.leading, 6)
@@ -93,14 +93,14 @@ extension MessageStatusView {
     struct StatusButton: View {
         @EnvironmentObject private var viewConfig: AmityViewConfigController
         
-        let icon: ImageResource
+        let icon: Image
         let action: DefaultTapAction
         
         var body: some View {
             Button {
                 action()
             } label: {
-                Image(icon)
+                icon
                     .renderingMode(.template)
                     .resizable()
                     .scaledToFit()

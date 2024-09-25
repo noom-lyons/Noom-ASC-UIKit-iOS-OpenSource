@@ -130,7 +130,7 @@ struct CommentListView<Content>: View where Content: View {
                 .frame(height: 1)
             
             HStack(spacing: 16) {
-                Image(AmityIcon.deletedMessageIcon.getImageResource())
+                AmityIcon.deletedMessageIcon.getImageResource()
                     .resizable()
                     .renderingMode(.template)
                     .frame(width: 16, height: 16)
@@ -229,7 +229,7 @@ struct ReplyCommentListView<Content>: View where Content: View {
     func getDeletedMessageView() -> some View {
         HStack {
             HStack(spacing: 8) {
-                Image(AmityIcon.deletedMessageIcon.getImageResource())
+                AmityIcon.deletedMessageIcon.getImageResource()
                     .resizable()
                     .renderingMode(.template)
                     .frame(width: 16, height: 16)

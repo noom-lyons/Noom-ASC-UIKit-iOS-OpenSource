@@ -110,7 +110,7 @@ public struct AmityPostContentComponent: AmityComponentView {
                             }
                         
                         if post.isFromBrand {
-                            Image(AmityIcon.brandBadge.imageResource)
+                            AmityIcon.brandBadge.imageResource
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 18, height: 18)
@@ -120,7 +120,7 @@ public struct AmityPostContentComponent: AmityComponentView {
                         
                         if let _ = post.targetCommunity, !hideTarget {
                             HStack(spacing: 8) {
-                                Image(AmityIcon.arrowIcon.getImageResource())
+                                AmityIcon.arrowIcon.getImageResource()
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(size: CGSize(width: 10, height: 10))
@@ -132,7 +132,7 @@ public struct AmityPostContentComponent: AmityComponentView {
                         // If user posts to his own feed, we hide this part
                         if post.postTargetType == .user && post.postedUserId != post.targetId {
                             HStack(spacing: 8) {
-                                Image(AmityIcon.arrowIcon.getImageResource())
+                                AmityIcon.arrowIcon.getImageResource()
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(size: CGSize(width: 10, height: 10))
@@ -147,7 +147,7 @@ public struct AmityPostContentComponent: AmityComponentView {
                             let moderatorIcon = AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .moderatorBadge, key: "icon", of: String.self) ?? "")
                             let moderatorTitle = viewConfig.getConfig(elementId: .moderatorBadge, key: "text", of: String.self) ?? ""
                             HStack(spacing: 3) {
-                                Image(moderatorIcon)
+                                moderatorIcon
                                     .resizable()
                                     .frame(width: 12, height: 12)
                                     .padding(.leading, 6)
@@ -177,7 +177,7 @@ public struct AmityPostContentComponent: AmityComponentView {
                 Spacer()
                 
                 let pinBadge = AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .pinBadge, key: "image", of: String.self) ?? "")
-                Image(pinBadge)
+                pinBadge
                     .renderingMode(.template)
                     .scaledToFit()
                     .foregroundColor(Color(viewConfig.theme.primaryColor))
@@ -190,7 +190,7 @@ public struct AmityPostContentComponent: AmityComponentView {
                         showBottomSheet.toggle()
                     }, label: {
                         let menuIcon = AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .menuButton, key: "icon", of: String.self) ?? "")
-                        Image(menuIcon)
+                        menuIcon
                             .resizable()
                             .renderingMode(.template)
                             .foregroundColor(Color(viewConfig.theme.baseColor))
@@ -364,7 +364,7 @@ public struct AmityPostContentComponent: AmityComponentView {
             VStack(spacing: 8) {
                 HStack(spacing: 4) {
                     Group {
-                        Image(AmityIcon.likeReactionIcon.getImageResource())
+                        AmityIcon.likeReactionIcon.getImageResource()
                             .resizable()
                             .frame(width: 20.0, height: 20.0)
                             .isHidden(post.reactionsCount == 0, remove: true)
@@ -422,7 +422,7 @@ public struct AmityPostContentComponent: AmityComponentView {
                     let reactionIcon = AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .reactionButton, key: "icon", of: String.self) ?? "")
                     let reactionTitle = viewConfig.getConfig(elementId: .reactionButton, key: "text", of: String.self) ?? ""
                     HStack(spacing: 3) {
-                        Image(post.isLiked ? AmityIcon.likeReactionIcon.getImageResource() : reactionIcon)
+                        (post.isLiked ? AmityIcon.likeReactionIcon.getImageResource() : reactionIcon)
                             .resizable()
                             .frame(width: 20.0, height: 20.0)
                         if style == .feed {
@@ -445,7 +445,7 @@ public struct AmityPostContentComponent: AmityComponentView {
                     let commentIcon = AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .commentButton, key: "icon", of: String.self) ?? "")
                     let commentTitle = viewConfig.getConfig(elementId: .commentButton, key: "text", of: String.self) ?? ""
                     HStack(spacing: 3) {
-                        Image(commentIcon)
+                        commentIcon
                             .resizable()
                             .frame(width: 20.0, height: 20.0)
                         
@@ -470,7 +470,7 @@ public struct AmityPostContentComponent: AmityComponentView {
                     let shareIcon = AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .shareButton, key: "icon", of: String.self) ?? "")
                     let shareTitle = viewConfig.getConfig(elementId: .shareButton, key: "text", of: String.self) ?? ""
                     HStack(spacing: 3) {
-                        Image(shareIcon)
+                        shareIcon
                             .resizable()
                             .frame(width: 20.0, height: 20.0)
                         Text(shareTitle)
@@ -508,7 +508,7 @@ extension AmityPostContentComponent {
     var communityNameLabel: some View {
         HStack(spacing: 8) {
             if !post.isTargetPublicCommunity {
-                Image(AmityIcon.getImageResource(named: "lockBlackIcon"))
+                AmityIcon.getImageResource(named: "lockBlackIcon")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 16, height: 16)
@@ -526,7 +526,7 @@ extension AmityPostContentComponent {
             
             if post.isTargetOfficialCommunity {
                 let verifiedBadgeIcon = AmityIcon.getImageResource(named: "verifiedBadge")
-                Image(verifiedBadgeIcon)
+                verifiedBadgeIcon
                     .resizable()
                     .scaledToFill()
                     .frame(width: 16, height: 16)

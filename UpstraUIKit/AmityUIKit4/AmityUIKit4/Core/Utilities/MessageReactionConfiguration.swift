@@ -7,6 +7,7 @@
 
 import Foundation
 import DeveloperToolsSupport
+import SwiftUI
 
 class MessageReactionConfiguration {
     
@@ -23,7 +24,7 @@ class MessageReactionConfiguration {
         var reactionList = [AmityReactionType]()
         reactionsDict.forEach { item in
             let name = item["name"] ?? ""
-            let image = ImageResource(name: item["image"] ?? "", bundle: AmityUIKit4Manager.bundle)
+            let image = Image(item["image"] ?? "", bundle: AmityUIKit4Manager.bundle)
 
             let item = AmityReactionType(name: name, image: image, accessibilityId: item["image"] ?? "")
             reactionList.append(item)
@@ -41,6 +42,6 @@ class MessageReactionConfiguration {
 struct AmityReactionType: Identifiable {
     let id: UUID = UUID()
     let name: String
-    let image: ImageResource
+    let image: Image
     let accessibilityId: String
 }

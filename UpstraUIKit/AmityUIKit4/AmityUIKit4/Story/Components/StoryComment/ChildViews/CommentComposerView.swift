@@ -37,7 +37,7 @@ struct CommentComposerView: View {
                 Button {
                     viewModel.replyState.showToReply.toggle()
                 } label: {
-                    Image(AmityIcon.grayCloseIcon.getImageResource())
+                    AmityIcon.grayCloseIcon.getImageResource()
                         .frame(width: 20, height: 20)
                         .padding(.trailing, 16)
                 }
@@ -93,7 +93,7 @@ struct CommentComposerView: View {
             .padding([.bottom, .top], 10)
         } else {
             HStack(spacing: 16) {
-                Image(AmityIcon.lockIcon.getImageResource())
+                AmityIcon.lockIcon.getImageResource()
                     .renderingMode(.template)
                     .resizable()
                     .frame(width: 20, height: 20)

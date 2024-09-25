@@ -74,7 +74,7 @@ public struct AmityCommunityMembershipPage: AmityPageView {
     
     private var navigationBarView: some View {
         HStack(spacing: 0) {
-            Image(AmityIcon.backIcon.getImageResource())
+            AmityIcon.backIcon.getImageResource()
                 .renderingMode(.template)
                 .resizable()
                 .scaledToFit()
@@ -92,7 +92,7 @@ public struct AmityCommunityMembershipPage: AmityPageView {
             
             Spacer()
             
-            Image(AmityIcon.plusIcon.getImageResource())
+            AmityIcon.plusIcon.getImageResource()
                 .renderingMode(.template)
                 .resizable()
                 .scaledToFit()

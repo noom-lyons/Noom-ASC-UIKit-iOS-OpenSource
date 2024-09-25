@@ -104,7 +104,7 @@ public struct AmityCommunitySetupPage: AmityPageView {
                                             .opacity(0.25)
                                         
                                         
-                                        Image(AmityIcon.cameraIcon.getImageResource())
+                                        AmityIcon.cameraIcon.getImageResource()
                                             .resizable()
                                             .scaledToFill()
                                             .frame(width: 32, height: 28)
@@ -226,7 +226,7 @@ public struct AmityCommunitySetupPage: AmityPageView {
     
     private var navigationBarView: some View {
         HStack(spacing: 0) {
-            Image(AmityIcon.closeIcon.getImageResource())
+            AmityIcon.closeIcon.getImageResource()
                 .renderingMode(.template)
                 .resizable()
                 .scaledToFit()
@@ -265,7 +265,7 @@ public struct AmityCommunitySetupPage: AmityPageView {
         if selectedCategories.isEmpty {
             ZStack {
                 ZStack(alignment: .trailing) {
-                    Image(AmityIcon.arrowIcon.getImageResource())
+                    AmityIcon.arrowIcon.getImageResource()
                         .renderingMode(.template)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -305,7 +305,7 @@ public struct AmityCommunitySetupPage: AmityPageView {
                             .environmentObject(viewConfig)
                             .padding(.trailing, 10)
                         
-                        Image(AmityIcon.arrowIcon.getImageResource())
+                        AmityIcon.arrowIcon.getImageResource()
                             .renderingMode(.template)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
@@ -356,7 +356,7 @@ public struct AmityCommunitySetupPage: AmityPageView {
                                     .fill(.black.opacity(0.3))
                                     .frame(width: 18, height: 18)
                                     .overlay(
-                                        Image(AmityIcon.closeIcon.getImageResource())
+                                        AmityIcon.closeIcon.getImageResource()
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
                                             .frame(width: 18, height: 18)
@@ -381,7 +381,7 @@ public struct AmityCommunitySetupPage: AmityPageView {
                                 .fill(Color(viewConfig.theme.baseColorShade4))
                                 .frame(width: 40, height: 40)
                                 .overlay(
-                                    Image(AmityIcon.plusIcon.getImageResource())
+                                    AmityIcon.plusIcon.getImageResource()
                                         .renderingMode(.template)
                                         .resizable()
                                         .foregroundColor(Color(viewConfig.theme.baseColor))
@@ -431,7 +431,7 @@ public struct AmityCommunitySetupPage: AmityPageView {
                 .cornerRadius(4)
                 .overlay (
                     HStack(spacing: 8) {
-                        Image(AmityIcon.plusIcon.getImageResource())
+                        AmityIcon.plusIcon.getImageResource()
                             .resizable()
                             .renderingMode(.template)
                             .foregroundColor(.white)
@@ -509,13 +509,13 @@ public struct AmityCommunitySetupPage: AmityPageView {
     
     
     @ViewBuilder
-    private func getItemView(image: ImageResource, title: String, onTapAction: @escaping () -> Void) -> some View {
+    private func getItemView(image: Image, title: String, onTapAction: @escaping () -> Void) -> some View {
         HStack(spacing: 12) {
             Rectangle()
                 .fill(Color(viewConfig.defaultLightTheme.baseColorShade4))
                 .frame(width: 32, height: 32)
                 .overlay (
-                    Image(image)
+                    image
                         .resizable()
                         .scaledToFill()
                         .frame(width: 20, height: 20)

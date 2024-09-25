@@ -25,7 +25,7 @@ public struct AmityPostTargetSelectionPage: AmityPageView {
         VStack {
             HStack {
                 let closeButton = viewConfig.getConfig(elementId: .closeButtonElement, key: "image", of: String.self) ?? ""
-                Image(AmityIcon.getImageResource(named: closeButton))
+                AmityIcon.getImageResource(named: closeButton)
                     .renderingMode(.template)
                     .frame(width: 24, height: 24)
                     .foregroundColor(Color(viewConfig.theme.baseColor))

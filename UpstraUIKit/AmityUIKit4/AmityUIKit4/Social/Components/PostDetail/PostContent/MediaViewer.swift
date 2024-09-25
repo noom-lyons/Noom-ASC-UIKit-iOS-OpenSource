@@ -57,7 +57,7 @@ struct MediaViewer: View {
                         }
                         
                         if media.type == .video {
-                            Image(AmityIcon.videoControlIcon.getImageResource())
+                            AmityIcon.videoControlIcon.getImageResource()
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 40, height: 40)
@@ -118,7 +118,7 @@ struct MediaViewer: View {
                 
                 ZStack(alignment: .center) {
                     HStack(spacing: 0) {
-                        Image(AmityIcon.circleCloseIcon.getImageResource())
+                        AmityIcon.circleCloseIcon.getImageResource()
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(size: CGSize(width: 32, height: 32))

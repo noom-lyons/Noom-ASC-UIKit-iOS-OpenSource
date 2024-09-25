@@ -37,7 +37,7 @@ struct CommunityCellView: View {
                 HStack(spacing: 2) {
                     if !model.isPublic {
                         let lockIcon = AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .communityPrivateBadge, key: "icon", of: String.self) ?? "")
-                        Image(lockIcon)
+                        lockIcon
                             .renderingMode(.template)
                             .resizable()
                             .scaledToFill()
@@ -55,7 +55,7 @@ struct CommunityCellView: View {
                     
                     if model.isOfficial {
                         let verifiedBadgeIcon = AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .communityOfficialBadge, key: "icon", of: String.self) ?? "")
-                        Image(verifiedBadgeIcon)
+                        verifiedBadgeIcon
                             .resizable()
                             .scaledToFill()
                             .frame(width: 20, height: 12)

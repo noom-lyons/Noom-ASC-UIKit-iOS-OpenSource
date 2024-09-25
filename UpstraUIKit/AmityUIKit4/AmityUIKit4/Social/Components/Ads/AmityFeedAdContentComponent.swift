@@ -59,7 +59,7 @@ struct AmityFeedAdContentComponent: View {
             Button {
                 showAdInfo.toggle()
             } label: {
-                Image(AmityIcon.infoIcon.imageResource)
+                AmityIcon.infoIcon.imageResource
                     .foregroundColor(Color(viewConfig.theme.baseColorShade3))
             }
             .buttonStyle(.plain)
@@ -130,7 +130,7 @@ struct AmityFeedAdContentComponent: View {
             
             KFImage.url(URL(string: ad.image1_1?.largeFileURL ?? ""))
                 .placeholder({
-                    Image(AmityIcon.adAvatarPlaceholder.imageResource)
+                    AmityIcon.adAvatarPlaceholder.imageResource
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .background(Color.red.opacity(0.1))

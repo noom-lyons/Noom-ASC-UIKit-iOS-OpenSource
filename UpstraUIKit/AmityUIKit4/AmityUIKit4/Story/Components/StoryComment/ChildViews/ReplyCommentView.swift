@@ -56,7 +56,7 @@ struct ReplyCommentView: View {
         } label: {
             HStack {
                 HStack(spacing: 4) {
-                    Image(AmityIcon.replyArrowIcon.getImageResource())
+                    AmityIcon.replyArrowIcon.getImageResource()
                         .resizable()
                         .frame(width: 16, height: 16)
                         .padding(.leading, 8)
@@ -86,7 +86,7 @@ struct ReplyCommentView: View {
         } label: {
             HStack {
                 HStack(spacing: 4) {
-                    Image(AmityIcon.replyArrowIcon.getImageResource())
+                    AmityIcon.replyArrowIcon.getImageResource()
                         .resizable()
                         .frame(width: 16, height: 16)
                         .padding(.leading, 8)

@@ -35,7 +35,7 @@ struct CommentBottomSheetView: View {
     private func getOwnerBottomSheetView() -> some View {
         VStack {
             HStack(spacing: 12) {
-                Image(AmityIcon.editCommentIcon.getImageResource())
+                AmityIcon.editCommentIcon.getImageResource()
                     .renderingMode(.template)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
@@ -58,7 +58,7 @@ struct CommentBottomSheetView: View {
             .padding(EdgeInsets(top: 16, leading: 20, bottom: 0, trailing: 20))
             
             HStack(spacing: 12) {
-                Image(AmityIcon.trashBinIcon.getImageResource())
+                AmityIcon.trashBinIcon.getImageResource()
                     .renderingMode(.template)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
@@ -99,7 +99,7 @@ struct CommentBottomSheetView: View {
     func getNonOwnerBottomSheetView() -> some View {
         VStack {
             HStack(spacing: 12) {
-                Image(AmityIcon.flagIcon.getImageResource())
+                AmityIcon.flagIcon.getImageResource()
                     .renderingMode(.template)
                     .resizable()
                     .aspectRatio(contentMode: .fill)

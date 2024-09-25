@@ -32,7 +32,7 @@ struct AmityTextMessageEditPreview: View {
             Button(action: {
                 closeAction()
             }, label: {
-                Image(AmityIcon.Chat.closeReply.imageResource)
+                AmityIcon.Chat.closeReply.imageResource
             })
             .padding()
         }

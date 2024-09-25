@@ -152,7 +152,7 @@ public struct AmityTextEditorView: View {
                                                         .foregroundColor(Color(textColor))
                                                     
                                                     if user.isBrand {
-                                                        Image(AmityIcon.brandBadge.imageResource)
+                                                        AmityIcon.brandBadge.imageResource
                                                             .resizable()
                                                             .scaledToFit()
                                                             .frame(width: 18, height: 18)

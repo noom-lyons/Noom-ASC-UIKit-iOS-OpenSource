@@ -31,7 +31,7 @@ public struct AmityTopSearchBarComponent: AmityComponentView {
         HStack(spacing: 5) {
             HStack(spacing: 0) {
                 let searchIcon = AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .searchIcon, key: "icon", of: String.self) ?? "")
-                Image(searchIcon)
+                searchIcon
                     .resizable()
                     .renderingMode(.template)
                     .foregroundColor(Color(viewConfig.theme.baseColorShade2))
@@ -48,7 +48,7 @@ public struct AmityTopSearchBarComponent: AmityComponentView {
                         viewModel.searchKeyword = ""
                     }, label: {
                         let clearIcon = AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .clearButton, key: "icon", of: String.self) ?? "")
-                        Image(clearIcon)
+                        clearIcon
                             .resizable()
                             .frame(width: 17, height: 17)
                             .padding(.trailing, 12)

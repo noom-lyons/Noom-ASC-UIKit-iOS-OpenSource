@@ -132,7 +132,7 @@ struct ReactionListRowItem: View {
             
             Spacer()
             
-            Image(user.reactionImage)
+            user.reactionImage
                 .resizable()
                 .scaledToFit()
                 .frame(width: 24, height: 24)
@@ -255,7 +255,7 @@ struct ReactionUser {
     let displayName: String
     let avatarURL: String
     let reactionName: String
-    let reactionImage: ImageResource
+    let reactionImage: Image
     
     init(reaction: AmityReaction) {
         self.userId = reaction.creator?.userId ?? ""

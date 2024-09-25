@@ -31,7 +31,7 @@ public struct AmityLiveChatMessageQuickReaction: View {
                     await viewModel.addQuickRaction(reaction: quickReaction)
                 }
             } label: {
-                Image(AmityIcon.Chat.messageBubbleAddReactionIcon.imageResource)
+                AmityIcon.Chat.messageBubbleAddReactionIcon.imageResource
                     .renderingMode(.template)
                     .resizable()
                     .scaledToFit()

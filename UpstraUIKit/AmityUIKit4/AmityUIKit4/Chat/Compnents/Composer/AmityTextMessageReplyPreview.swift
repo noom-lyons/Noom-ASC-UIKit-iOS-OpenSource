@@ -47,7 +47,7 @@ struct AmityTextMessageReplyPreview: View {
             Button(action: {
                 closeAction()
             }, label: {
-                Image(AmityIcon.Chat.closeReply.imageResource)
+                AmityIcon.Chat.closeReply.imageResource
             })
             .padding(.trailing, 12)
             .accessibilityIdentifier(AccessibilityID.Chat.ReplyPanel.close_button)

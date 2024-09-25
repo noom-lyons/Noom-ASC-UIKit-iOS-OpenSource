@@ -57,7 +57,7 @@ struct AmityCommentAdComponent: View {
                                 HStack(spacing: 0) {
                                     KFImage.url(URL(string: ad.image1_1?.largeFileURL ?? ""))
                                         .placeholder({
-                                            Image(AmityIcon.adAvatarPlaceholder.imageResource)
+                                            AmityIcon.adAvatarPlaceholder.imageResource
                                                 .aspectRatio(contentMode: .fill)
                                                 .background(Color.red.opacity(0.1))
                                                 .cornerRadius(8)
@@ -115,7 +115,7 @@ struct AmityCommentAdComponent: View {
                         Button {
                             selctedAdInfoAction?(ad)
                         } label: {
-                            Image(AmityIcon.infoIcon.imageResource)
+                            AmityIcon.infoIcon.imageResource
                                 .foregroundColor(Color(viewConfig.theme.baseColorShade3))
                         }
                         .buttonStyle(.plain)
@@ -144,7 +144,7 @@ struct AdSponsorLabel: View {
     
     var body: some View {
         HStack(spacing: 0) {
-            Image(AmityIcon.starIcon.imageResource)
+            AmityIcon.starIcon.imageResource
                 .resizable()
                 .scaledToFit()
                 .frame(width: 12, height: 12)

@@ -103,7 +103,7 @@ public struct AmityLiveChatMessageList: AmityComponentView {
                         .padding(.bottom, 16)
                     
                     HStack(spacing: 0) {
-                        Image(AmityIcon.Chat.mutedIcon.imageResource)
+                        AmityIcon.Chat.mutedIcon.imageResource
                             .resizable()
                             .scaledToFit()
                             .frame(width: 20, height: 20)

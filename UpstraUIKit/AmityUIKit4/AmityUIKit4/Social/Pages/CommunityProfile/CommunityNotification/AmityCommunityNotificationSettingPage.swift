@@ -81,9 +81,9 @@ public struct AmityCommunityNotificationSettingPage: AmityPageView {
     }
     
     @ViewBuilder
-    private func getItemView(_ icon: ImageResource, text: String) -> some View {
+    private func getItemView(_ icon: Image, text: String) -> some View {
         HStack(spacing: 12) {
-            Image(icon)
+            icon
                 .renderingMode(.template)
                 .resizable()
                 .scaledToFit()
@@ -96,7 +96,7 @@ public struct AmityCommunityNotificationSettingPage: AmityPageView {
             
             Spacer()
            
-            Image(AmityIcon.arrowIcon.getImageResource())
+            AmityIcon.arrowIcon.getImageResource()
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 18, height: 18)
@@ -107,7 +107,7 @@ public struct AmityCommunityNotificationSettingPage: AmityPageView {
     
     private var navigationBarView: some View {
         HStack(spacing: 0) {
-            Image(AmityIcon.backIcon.getImageResource())
+            AmityIcon.backIcon.getImageResource()
                 .renderingMode(.template)
                 .resizable()
                 .scaledToFit()

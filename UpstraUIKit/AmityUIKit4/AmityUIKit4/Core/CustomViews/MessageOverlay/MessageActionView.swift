@@ -26,7 +26,7 @@ struct MessageActionView: View {
     struct ActionButton: View {
         
         let title: String
-        let image: ImageResource
+        let image: Image
         let action: () -> Void
 
         var body: some View {
@@ -36,7 +36,7 @@ struct MessageActionView: View {
                     
                     Spacer()
                     
-                    Image(image)
+                    image
                         .renderingMode(.template)
                         .frame(width: 20, height: 20)
                 }

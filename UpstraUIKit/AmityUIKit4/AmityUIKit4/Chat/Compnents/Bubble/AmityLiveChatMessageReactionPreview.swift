@@ -56,10 +56,10 @@ public struct AmityLiveChatMessageReactionPreview: View {
     
     struct ReactionLabel: View {
         
-        let image: ImageResource
+        let image: Image
         
         var body: some View {
-            Image(image)
+            image
                 .resizable()
                 .scaledToFit()
                 .frame(width: 20, height: 20)

@@ -61,7 +61,7 @@ public struct AmityDraftStoryPage: AmityPageView {
                             Button(action: {
                                 isAlertShown = true
                             }, label: {
-                                Image(AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .backButtonElement, key: "back_icon", of: String.self) ?? ""))
+                                AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .backButtonElement, key: "back_icon", of: String.self) ?? "")
                                     .frame(width: 32, height: 32)
                                     .background(Color(UIColor(hex: viewConfig.getConfig(elementId: .backButtonElement, key: "background_color", of: String.self) ?? "").withAlphaComponent(0.5)))
                                     .clipShape(.circle)
@@ -76,7 +76,7 @@ public struct AmityDraftStoryPage: AmityPageView {
                                 Button {
                                     previewDisplayMode = previewDisplayMode == .fill ? .fit : .fill
                                 } label: {
-                                    Image(AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .aspectRatioButtonElement, key: "aspect_ratio_icon", of: String.self) ?? ""))
+                                    AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .aspectRatioButtonElement, key: "aspect_ratio_icon", of: String.self) ?? "")
                                         .frame(width: 32, height: 32)
                                         .background(Color(UIColor(hex: viewConfig.getConfig(elementId: .aspectRatioButtonElement, key: "background_color", of: String.self) ?? "").withAlphaComponent(0.5)))
                                         .clipShape(.circle)
@@ -92,7 +92,7 @@ public struct AmityDraftStoryPage: AmityPageView {
                                 }
                                 showHyperLinkSheet = true
                             } label: {
-                                Image(AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .hyperLinkButtonElement, key: "hyperlink_button_icon", of: String.self) ?? ""))
+                                AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .hyperLinkButtonElement, key: "hyperlink_button_icon", of: String.self) ?? "")
                                     .frame(width: 32, height: 32)
                                     .background(Color(UIColor(hex: viewConfig.getConfig(elementId: .hyperLinkButtonElement, key: "background_color", of: String.self) ?? "").withAlphaComponent(0.5)))
                                     .clipShape(.circle)
@@ -106,7 +106,7 @@ public struct AmityDraftStoryPage: AmityPageView {
                         
                         if !viewModel.hyperLinkConfigModel.url.isEmpty {
                             HStack(spacing: 0) {
-                                Image(AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .hyperLinkElement, key: "hyper_link_icon", of: String.self) ?? ""))
+                                AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .hyperLinkElement, key: "hyper_link_icon", of: String.self) ?? "")
                                     .frame(width: 20, height: 20)
                                     .padding(EdgeInsets(top: 0, leading: 12, bottom: 0, trailing: 8))
                                 let title = viewModel.hyperLinkConfigModel.getCustomName().isEmpty ? viewModel.hyperLinkConfigModel.getDomainName() ?? "" : viewModel.hyperLinkConfigModel.getCustomName()
@@ -230,7 +230,7 @@ public struct AmityDraftStoryPage: AmityPageView {
                 .font(Font.system(size: 14))
                 .fontWeight(.medium)
             
-            Image(shareIcon)
+            shareIcon
                 .frame(width: 20, height: 20)
                 .padding(.trailing, 8)
         }

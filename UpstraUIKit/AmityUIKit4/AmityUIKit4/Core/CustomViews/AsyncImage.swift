@@ -9,11 +9,11 @@ import SwiftUI
 import UIKit
 
 struct AsyncImage: View {
-    let placeholder: ImageResource?
+    let placeholder: Image?
     let url: URL?
     let contentMode: ContentMode
     
-    init(placeholder: ImageResource? = nil, url: URL?, contentMode: ContentMode = .fill) {
+    init(placeholder: Image? = nil, url: URL?, contentMode: ContentMode = .fill) {
         self.placeholder = placeholder
         self.url = url
         self.contentMode = contentMode
@@ -24,7 +24,7 @@ struct AsyncImage: View {
             KFImage.url(url)
                 .placeholder {
                     if let placeholder {
-                        Image(placeholder)
+                        placeholder
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                     }

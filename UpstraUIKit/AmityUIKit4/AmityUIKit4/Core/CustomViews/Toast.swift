@@ -31,7 +31,7 @@ public struct ToastView: View {
     public var body: some View {
         HStack(spacing: 0) {
             if style == .loading {
-                Image(getIcon(style: style))
+                getIcon(style: style)
                     .frame(width: 20, height: 20)
                     .padding(EdgeInsets(top: 16, leading: 12, bottom: 16, trailing: 12))                    
                     .rotationEffect(.degrees(rotatingDegree))
@@ -42,7 +42,7 @@ public struct ToastView: View {
                     }
                 
             } else {
-                Image(getIcon(style: style))
+                getIcon(style: style)
                     .padding(EdgeInsets(top: 16, leading: 12, bottom: 16, trailing: 8))
             }
             Text(message)
@@ -57,7 +57,7 @@ public struct ToastView: View {
         .padding([.leading, .trailing], 16)
     }
     
-    private func getIcon(style: ToastStyle) -> ImageResource {
+    private func getIcon(style: ToastStyle) -> Image {
         switch style {
         case .success:
             return AmityIcon.statusSuccessIcon.getImageResource()

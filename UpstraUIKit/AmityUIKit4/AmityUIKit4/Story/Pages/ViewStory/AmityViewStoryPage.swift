@@ -113,7 +113,7 @@ public struct AmityViewStoryPage: AmityPageView {
                                         showBottomSheet.toggle()
                                     } label: {
                                         let icon = AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .overflowMenuElement, key: "overflow_menu_icon", of: String.self) ?? "")
-                                        Image(icon)
+                                        icon
                                             .frame(width: 24, height: 20)
                                             .padding(.trailing, 20)
                                     }
@@ -133,7 +133,7 @@ public struct AmityViewStoryPage: AmityPageView {
                                     host.controller?.dismiss(animated: true)
                                 } label: {
                                     let icon = AmityIcon.getImageResource(named: viewConfig.getConfig(elementId: .closeButtonElement, key: "close_icon", of: String.self) ?? "")
-                                    Image(icon)
+                                    icon
                                         .frame(width: 24, height: 18)
                                         .padding(.trailing, 25)
                                 }
@@ -204,7 +204,7 @@ public struct AmityViewStoryPage: AmityPageView {
     private func getBottomSheetView() -> some View {
         VStack {
             HStack(spacing: 12) {
-                Image(AmityIcon.trashBinIcon.getImageResource())
+                AmityIcon.trashBinIcon.getImageResource()
                     .renderingMode(.template)
                     .resizable()
                     .aspectRatio(contentMode: .fill)

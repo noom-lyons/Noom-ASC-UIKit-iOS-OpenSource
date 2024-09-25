@@ -29,7 +29,7 @@ public struct AmityCommunitySearchResultComponent: AmityComponentView {
         ZStack {
             if viewModel.communities.isEmpty && viewModel.loadingState == .loaded {
                 VStack(spacing: 15) {
-                    Image(AmityIcon.noSearchableIcon.getImageResource())
+                    AmityIcon.noSearchableIcon.getImageResource()
                         .resizable()
                         .scaledToFit()
                         .frame(width: 60, height: 60)

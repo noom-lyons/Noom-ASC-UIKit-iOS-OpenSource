@@ -53,7 +53,7 @@ public struct AmityCommunityStorySettingPage: AmityPageView {
     
     private var navigationBarView: some View {
         HStack(spacing: 0) {
-            Image(AmityIcon.backIcon.getImageResource())
+            AmityIcon.backIcon.getImageResource()
                 .renderingMode(.template)
                 .resizable()
                 .scaledToFit()
